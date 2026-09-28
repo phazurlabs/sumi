@@ -1,14 +1,16 @@
 <!doctype html>
 <!-- README hero. Rendered to assets/hero-dark.png and assets/hero-light.png by
-     assets/src/render.mjs (?theme=dark|light). 1600x640 CSS px at 2x. -->
+     assets/src/render.mjs (?theme=dark|light), then shipped as JPEG. 1600x640 CSS px at 2x.
+     Brand: the Sumi mark is shared with Shippr (Sumi is Shippr's design layer). -->
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
 <style>
-  :root { --wall: #151412; --ink: #F1ECE4; --muted: #8C857B; --coral: #E8715A; --paper: #F4EFE6; --paper-ink: #1A1A2E; }
-  :root[data-theme="light"] { --wall: #E9E4DA; --ink: #16140F; --muted: #6F685D; --paper: #FFFDF8; }
+  /* Shippr brand tokens: paper #f3f0e8, ink #111110, signal #ff4f00 (#ff7a3d as a graphic on ink) */
+  :root { --wall: #141412; --ink: #f3f0e8; --muted: #8b8474; --signal: #ff7a3d; --paper: #f3f0e8; --paper-ink: #111110; }
+  :root[data-theme="light"] { --wall: #e8e3d8; --ink: #111110; --muted: #6b665c; --signal: #ff4f00; --paper: #fbf9f4; }
   * { margin: 0; box-sizing: border-box; }
   html, body { width: 1600px; height: 640px; overflow: hidden; background: var(--wall); }
   .wall { position: absolute; inset: 0; }
@@ -20,20 +22,20 @@
   .paste::after { content: ""; position: absolute; inset: 0; background:
       linear-gradient(115deg, transparent 40%, rgba(0,0,0,.06) 41%, transparent 43%),
       linear-gradient(35deg, transparent 62%, rgba(0,0,0,.05) 63%, transparent 65%); mix-blend-mode: multiply; }
-  .paste svg { position: absolute; left: 50%; top: 52%; width: 330px; transform: translate(-50%, -50%); }
-  .paste .caption { position: absolute; left: 28px; bottom: 22px; font: 500 13px/1 'JetBrains Mono', monospace; letter-spacing: .08em; color: var(--paper-ink); opacity: .55; }
+  .paste .mark { position: absolute; left: 50%; top: 42%; width: 250px; transform: translate(-50%, -50%); color: var(--paper-ink); }
+  .paste .word { position: absolute; left: 0; right: 0; top: 356px; text-align: center; font: 700 64px/1 'Clash Display', sans-serif; letter-spacing: -.03em; color: var(--paper-ink); }
+  .paste .caption { position: absolute; left: 28px; right: 28px; bottom: 22px; display: flex; justify-content: space-between; font: 500 13px/1 'JetBrains Mono', monospace; letter-spacing: .06em; color: var(--paper-ink); opacity: .55; }
   .tape { position: absolute; width: 110px; height: 34px; background: rgba(240,228,200,.72); box-shadow: 0 1px 2px rgba(0,0,0,.15); }
   .t1 { left: 60px; top: 58px; transform: rotate(-38deg); }
   .t2 { left: 452px; top: 60px; transform: rotate(32deg); }
   /* type */
-  .tag { position: absolute; left: 610px; top: 36px; font: 400 210px/1 'Permanent Marker', cursive; color: var(--coral);
-         transform: rotate(-5deg); text-shadow: 0 0 22px rgba(232,113,90,.35); letter-spacing: -.01em; }
-  .drip { position: absolute; width: 7px; border-radius: 0 0 6px 6px; background: var(--coral); opacity: .9; }
+  .tag { position: absolute; left: 610px; top: 36px; font: 400 210px/1 'Permanent Marker', cursive; color: var(--signal);
+         transform: rotate(-5deg); letter-spacing: -.01em; }
+  .drip { position: absolute; width: 7px; border-radius: 0 0 6px 6px; background: var(--signal); opacity: .9; }
   .d1 { left: 702px; top: 226px; height: 46px; } .d2 { left: 886px; top: 222px; height: 26px; width: 6px; } .d3 { left: 1062px; top: 218px; height: 72px; width: 8px; }
-  h1 { position: absolute; left: 616px; top: 300px; width: 900px; font: 400 92px/.94 'Anton', sans-serif; color: var(--ink);
-       text-transform: uppercase; letter-spacing: .005em; }
+  h1 { position: absolute; left: 616px; top: 306px; width: 920px; font: 600 88px/.96 'Clash Display', sans-serif; color: var(--ink); letter-spacing: -.035em; word-spacing: .1em; }
   .sig { position: absolute; left: 620px; bottom: 58px; font: 500 16px/1 'JetBrains Mono', monospace; color: var(--muted); letter-spacing: .06em; }
-  .sig b { color: var(--coral); font-weight: 500; }
+  .sig b { color: var(--signal); font-weight: 500; }
 </style>
 </head>
 <body>
@@ -51,18 +53,9 @@
 </div>
 
 <div class="paste">
-  <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
-    <g fill="#1A1A2E"><rect x="93" y="16" width="14" height="14" rx="1"/><rect x="93" y="32" width="14" height="14" rx="1"/><rect x="77" y="16" width="14" height="14" rx="1"/><rect x="77" y="32" width="14" height="14" rx="1"/><rect x="109" y="16" width="14" height="14" rx="1"/><rect x="109" y="32" width="14" height="14" rx="1"/><rect x="61" y="32" width="14" height="14" rx="1"/><rect x="125" y="32" width="14" height="14" rx="1"/></g>
-    <rect fill="#FF8C73" x="93" y="0" width="14" height="14" rx="1"/>
-    <rect fill="#E8715A" x="20" y="48" width="160" height="120" rx="32"/>
-    <path fill="#D4604D" d="M148,48 a32,32 0 0 1 32,32 v56 a32,32 0 0 1 -32,32 h-40 a100,100 0 0 0 40,-120Z" opacity=".35"/>
-    <g transform="translate(68,95)" stroke="#1A1A2E" stroke-width="5" stroke-linecap="round"><line x1="-14" y1="-14" x2="14" y2="14"/><line x1="14" y1="-14" x2="-14" y2="14"/></g>
-    <g transform="translate(132,95)" stroke="#1A1A2E" stroke-linecap="round"><circle r="12" fill="none" stroke-width="3"/><line x1="-17" x2="17" stroke-width="2.5"/><line y1="-17" y2="17" stroke-width="2.5"/><circle r="3.5" fill="#1A1A2E" stroke="none"/></g>
-    <ellipse fill="#F5C6B8" cx="55" cy="125" rx="12" ry="8" opacity=".6"/><ellipse fill="#F5C6B8" cx="145" cy="125" rx="12" ry="8" opacity=".6"/>
-    <path d="M88,140 Q100,148 112,140" fill="none" stroke="#1A1A2E" stroke-width="3" stroke-linecap="round"/>
-    <g fill="#E8715A"><rect x="50" y="170" width="100" height="55" rx="18"/><rect x="28" y="176" width="20" height="40" rx="10" transform="rotate(-8,38,176)"/><rect x="152" y="176" width="20" height="40" rx="10" transform="rotate(8,162,176)"/><rect x="66" y="225" width="26" height="32" rx="12"/><rect x="108" y="225" width="26" height="32" rx="12"/></g>
-  </svg>
-  <div class="caption">SUMI / PHAZUR LABS / SATX</div>
+  <svg class="mark" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="1" width="24" height="24" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><rect x="13" y="5" width="8" height="8" rx="1.5" fill="#ff4f00"/><path d="M5 18h16" stroke="currentColor" stroke-width="2"/></svg>
+  <div class="word">sumi</div>
+  <div class="caption"><span>THE DESIGN LAYER OF SHIPPR</span><span>SATX</span></div>
 </div>
 <div class="tape t1"></div><div class="tape t2"></div>
 

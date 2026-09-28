@@ -2,11 +2,13 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/hero-dark.jpg" />
     <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.jpg" />
-    <img src="assets/hero-dark.jpg" alt="Sumi: a pixel mascot wheat-pasted on a concrete wall next to the tag 'taste.' and the line 'The design crew for Claude Code.'" width="100%" />
+    <img src="assets/hero-dark.jpg" alt="The Sumi mark, a framed square with an orange block, wheat-pasted on a concrete wall next to the spray tag 'taste.' and the line 'The design crew for Claude Code.'" width="100%" />
   </picture>
 </p>
 
 <h3 align="center">The design crew for Claude Code. Taste, sourced from the wall.</h3>
+
+<p align="center"><img src="assets/sumi-mark.svg" width="18" alt="" /> The design layer of <a href="https://getshippr.pages.dev">Shippr</a>.</p>
 
 <p align="center">
   <code>/plugin marketplace add phazurlabs/sumi</code> → <code>/plugin install sumi@sumi-marketplace</code> → <code>/sumi:start</code>
@@ -248,6 +250,18 @@ Skills fire on their own when a question calls for them.
 
 ---
 
+## Sumi × Shippr
+
+Sumi and [Shippr](https://getshippr.pages.dev) share one mark, because they're one crew working two jobs.
+
+**Shippr** judges whether an AI-built app is ready to ship: architecture, security, the production gates a senior engineering team would hold you to.
+
+**Sumi** is the design layer. It makes sure the app looks like it deserves to ship.
+
+Shippr asks whether it will hold up. Sumi asks whether it's worth looking at. You need both answers before you ship.
+
+---
+
 ## Why Sumi exists
 
 I was the kid with the blackbook: graffiti, MySpace pages, beats in the Napster days.
@@ -354,4 +368,4 @@ The wall itself belongs to the jury picks on [Awwwards](https://www.awwwards.com
 
 Apache-2.0. See `LICENSE`, `NOTICE` and `TRADEMARKS.md`. Contributions need a CLA; see `CONTRIBUTING.md`.
 
-<p align="center"><b>Built for inheritance, not hype.</b><br /><sub>Phazur Labs · San Antonio</sub></p>
+<p align="center"><img src="assets/sumi-mark.svg" width="28" alt="Sumi" /><br /><b>Built for inheritance, not hype.</b><br /><sub>Sumi is the design layer of <a href="https://getshippr.pages.dev">Shippr</a> · Phazur Labs · San Antonio</sub></p>
