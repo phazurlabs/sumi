@@ -1,12 +1,12 @@
 ---
 name: sumi
-description: "Command map and quick start — see all 37 commands, starter recipes, Design Quality Score, anti-slop engine, and tips for best results. Start with /start if you are new."
+description: "Command map and quick start — see all 38 commands, starter recipes, Design Quality Score, anti-slop engine, and tips for best results. Start with /start if you are new."
 argument-hint: "[optional: command or topic]"
 ---
 
 # Sumi — Your Design Intelligence System
 
-Welcome to Sumi v4.0.0. 37 commands. 43 skills. Vibe coded slop into visual cuisine.
+Welcome to Sumi v4.2.0. 38 commands. 45 skills. 4 team agents. Vibe coded slop into visual cuisine.
 
 **New here?** Run `/start` instead. It asks one question and routes you — no need to read this map.
 
@@ -18,6 +18,9 @@ Welcome to Sumi v4.0.0. 37 commands. 43 skills. Vibe coded slop into visual cuis
 
 # The quality track — fix slop, prove it, ship it
 /fix  →  /before-after  →  /grade  →  ship
+
+# The studio track — look at real award winners first, then build and grade against them
+/inspo [brief]  →  /style  →  /page  →  /grade
 
 # The full track — plan, design, review, ship
 /brief  →  /style  →  /screen  →  /roast  →  /fix  →  /preflight
@@ -37,7 +40,7 @@ Welcome to Sumi v4.0.0. 37 commands. 43 skills. Vibe coded slop into visual cuis
 
 ---
 
-## All 37 Commands
+## All 38 Commands
 
 ### MAKE — Design and Build (20)
 
@@ -80,13 +83,14 @@ Audit existing designs for quality, accessibility, and usability problems.
 | `/before-after` | Visual proof of design transformation — side-by-side comparison |
 | `/ai-audit` | AI and agent interface audit — trust, control, recovery, disclosure |
 
-### PLAN — Research and Strategy (6)
+### PLAN — Research and Strategy (7)
 
 Research users, analyze competitors, plan metrics, and prepare for launch.
 
 | Command | What It Does |
 |---------|-------------|
 | `/brief` | Problem definition — persona, HMW questions, constraints, success criteria |
+| `/inspo` | Real references — live Awwwards winners, Mobbin flows, MotionSites recipes → captured DNA → Reference Board |
 | `/research` | User research AND usability testing — interviews, surveys, test plans |
 | `/benchmark` | Competitive analysis — 10-dimension scorecard, gap analysis, roadmap |
 | `/map` | Information architecture — sitemap, navigation, content hierarchy |
@@ -173,6 +177,12 @@ One word. Zero config. Complete visual identity.
 
 ---
 
+## What's New in v4.2.0
+
+- **Reference Engine** (`/inspo`) — sources live Awwwards winners (jury score, tags, live URL), Mobbin screens and flows (MCP) and MotionSites motion recipes. It captures the real sites on desktop and phone, measures their DNA (type scale, tracking, palette by painted area, section rhythm, grid, radius, motion stack), and writes a Reference Board to `.sumi/refs/`.
+- **The team** — four subagents: `scout` sources references, `art-director` sets direction, `ux-architect` designs flows from real Mobbin patterns, and `critic` grades your build side by side with the board.
+- **Calibrated grading** — with a board present, `/grade` and `/roast` score the build next to the best reference and report per-dimension deltas.
+
 ## What's New in v4.0.0
 
 - **Anti-Slop Engine** (`/fix`) — 60+ detection patterns, full code transformation. Turns AI-generated UI into production quality.
@@ -201,7 +211,7 @@ One word. Zero config. Complete visual identity.
 
 ---
 
-## 43 Skills (Auto-Invoked)
+## 45 Skills (Auto-Invoked)
 
 Skills activate automatically when relevant. You never need to call them directly.
 
@@ -211,7 +221,7 @@ Skills activate automatically when relevant. You never need to call them directl
 
 **Platform**: mobile-ux-design, desktop-app-design, platform-visual-standards, cross-cultural-i18n-ux
 
-**Visual**: ui-visual-design-system, visual-design-mastery, color-palette-library, typography-pairing-recipes, shadow-elevation-density, image-media-patterns, icon-illustration-systems
+**Visual**: reference-intelligence, ui-visual-design-system, visual-design-mastery, color-palette-library, typography-pairing-recipes, shadow-elevation-density, image-media-patterns, icon-illustration-systems
 
 **Patterns**: screen-flow-patterns, ui-pattern-intelligence, layout-block-intelligence, page-composition-engine, navigation-pattern-encyclopedia, form-design-encyclopedia, responsive-block-patterns
 

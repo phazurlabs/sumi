@@ -1,0 +1,117 @@
+<!doctype html>
+<!--
+  BEFORE — the brief handed to a coding agent with no design system:
+  "Build a landing page for Kiln, a small-batch coffee roaster in San Antonio.
+   One action: join the roast drop list."
+  This is the representative default output: every choice below is a default,
+  not a decision. It exists so /sumi:grade has something honest to measure.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kiln Coffee - Premium Small-Batch Coffee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; color: #000; background: #fff; line-height: 1.5; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+  .logo { font-weight: 800; font-size: 24px; background: linear-gradient(90deg, #7c3aed, #3b82f6); -webkit-background-clip: text; color: transparent; }
+  nav ul { display: flex; gap: 32px; list-style: none; }
+  nav a { color: #000; text-decoration: none; font-weight: 500; transition: color .2s ease; }
+  nav a:hover { color: #7c3aed; }
+  .btn { display: inline-block; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; transition: all .3s ease-in-out; border: 0; font: inherit; font-weight: 600; cursor: pointer; }
+  .btn-primary { background: linear-gradient(90deg, #7c3aed, #3b82f6); color: #fff; box-shadow: 0 10px 25px rgba(124,58,237,.3); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(124,58,237,.4); }
+  .btn-secondary { border: 1px solid #e5e7eb; color: #000; transition: all .25s cubic-bezier(.4,0,.2,1); }
+  .hero { padding: 96px 0; text-align: center; background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%); }
+  .badge { display: inline-block; padding: 6px 14px; border-radius: 999px; background: #ede9fe; color: #6d28d9; font-size: 14px; font-weight: 600; margin-bottom: 24px; }
+  .hero h1 { font-size: 56px; font-weight: 800; line-height: 1.1; margin-bottom: 24px; }
+  .hero h1 span { background: linear-gradient(90deg, #7c3aed, #3b82f6); -webkit-background-clip: text; color: transparent; }
+  .hero p { font-size: 20px; color: #6b7280; max-width: 640px; margin: 0 auto 40px; }
+  .hero .actions { display: flex; gap: 16px; justify-content: center; }
+  section { padding: 80px 0; }
+  .section-title { text-align: center; margin-bottom: 48px; }
+  .section-title h2 { font-size: 36px; font-weight: 700; margin-bottom: 12px; }
+  .section-title p { color: #6b7280; font-size: 18px; }
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { padding: 32px; border-radius: 16px; background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,.08); transition: transform .3s ease, box-shadow .3s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,.12); }
+  .icon { width: 48px; height: 48px; border-radius: 12px; background: linear-gradient(135deg, #7c3aed, #3b82f6); display: grid; place-items: center; color: #fff; font-size: 22px; margin-bottom: 20px; }
+  .card h3 { font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+  .card p { color: #6b7280; }
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+  .stat h3 { font-size: 40px; font-weight: 800; background: linear-gradient(90deg, #7c3aed, #3b82f6); -webkit-background-clip: text; color: transparent; }
+  .stat p { color: #6b7280; }
+  .testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .quote { padding: 28px; border-radius: 16px; border: 1px solid #e5e7eb; transition: border-color .2s linear; }
+  .quote:hover { border-color: #7c3aed; }
+  .quote p { margin-bottom: 16px; }
+  .quote strong { font-weight: 600; }
+  .cta { text-align: center; background: linear-gradient(135deg, #7c3aed, #3b82f6); color: #fff; border-radius: 24px; padding: 64px 24px; margin: 80px 0; }
+  .cta h2 { font-size: 40px; font-weight: 800; margin-bottom: 16px; }
+  .cta p { opacity: .9; margin-bottom: 32px; font-size: 18px; }
+  .cta form { display: flex; gap: 12px; justify-content: center; }
+  .cta input { padding: 14px 18px; border-radius: 12px; border: none; width: 320px; font-size: 16px; transition: box-shadow .15s ease-out; }
+  .cta .btn { background: #fff; color: #7c3aed; }
+  footer { padding: 40px 0; text-align: center; color: #6b7280; border-top: 1px solid #e5e7eb; }
+  .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp .6s cubic-bezier(.25,.46,.45,.94) forwards; }
+  @keyframes fadeUp { to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="logo">Kiln Coffee</div>
+      <ul><li><a href="#features">Features</a></li><li><a href="#about">About</a></li><li><a href="#reviews">Reviews</a></li></ul>
+      <a class="btn btn-primary" href="#join">Get Started</a>
+    </nav>
+  </div>
+  <header class="hero">
+    <div class="container fade-up">
+      <span class="badge">✨ Now roasting in San Antonio</span>
+      <h1>Elevate Your Coffee<br /><span>Experience Today</span></h1>
+      <p>Discover premium small-batch coffee, expertly roasted to perfection and delivered fresh to your door. Experience the difference quality makes.</p>
+      <div class="actions"><a class="btn btn-primary" href="#join">Join the Drop List</a><a class="btn btn-secondary" href="#features">Learn More</a></div>
+    </div>
+  </header>
+  <section id="features">
+    <div class="container">
+      <div class="section-title"><h2>Why Choose Kiln?</h2><p>Everything you need for the perfect cup</p></div>
+      <div class="features">
+        <div class="card"><div class="icon">☕</div><h3>Premium Quality</h3><p>We source only the finest beans from around the world to deliver an exceptional experience.</p></div>
+        <div class="card"><div class="icon">🔥</div><h3>Small-Batch Roasting</h3><p>Every batch is carefully roasted to unlock the unique flavors of each origin.</p></div>
+        <div class="card"><div class="icon">🚚</div><h3>Fast Delivery</h3><p>Fresh coffee delivered straight to your door, so you never run out.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <div class="container stats">
+      <div class="stat"><h3>10K+</h3><p>Happy Customers</p></div>
+      <div class="stat"><h3>25+</h3><p>Origins</p></div>
+      <div class="stat"><h3>4.9★</h3><p>Average Rating</p></div>
+      <div class="stat"><h3>24h</h3><p>Roast to Ship</p></div>
+    </div>
+  </section>
+  <section id="reviews">
+    <div class="container">
+      <div class="section-title"><h2>What Our Customers Say</h2><p>Join thousands of satisfied coffee lovers</p></div>
+      <div class="testimonials">
+        <div class="quote"><p>"The best coffee I've ever had. Absolutely game-changing!"</p><strong>Sarah M.</strong></div>
+        <div class="quote"><p>"Incredible quality and super fast shipping. Highly recommend!"</p><strong>James K.</strong></div>
+        <div class="quote"><p>"Kiln has completely transformed my morning routine."</p><strong>Emily R.</strong></div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <div class="cta" id="join">
+      <h2>Ready to Get Started?</h2>
+      <p>Join the drop list and be the first to know about new roasts.</p>
+      <form onsubmit="return false"><input type="email" placeholder="Enter your email" /><button class="btn" type="submit">Subscribe</button></form>
+    </div>
+  </div>
+  <footer><div class="container">© 2026 Kiln Coffee. All rights reserved.</div></footer>
+</body>
+</html>

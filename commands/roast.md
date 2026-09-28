@@ -30,6 +30,7 @@ Quick context grab — do not block on missing information:
 1. **What is it**: Component, screen, flow, or product
 2. **Who is it for**: Target users and their context
 3. **What stage**: Exploration, refinement, or final review
+4. **Against what**: If `.sumi/refs/board.json` exists, roast against the wall. Look at the best reference's screenshots and name where the build falls short, citing the reference by name
 4. **Designer's questions**: Does the designer have specific concerns? Address those first
 
 ### Step 1: Statements of Meaning

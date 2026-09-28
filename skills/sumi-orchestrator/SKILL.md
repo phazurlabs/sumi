@@ -34,9 +34,9 @@ app"), ask the qualifying questions below before routing.
 |---|---|---|
 | Find what's wrong with something that exists | **Evaluate** | `/audit`, `/roast` |
 | Fix AI-generated UI that works but looks wrong | **Fix** | `/fix` |
-| Design something that doesn't exist yet | **Create** | `/style` → `/screen` |
+| Design something that doesn't exist yet | **Create** | `/inspo` → `/style` → `/screen` |
 | Build or ship an actual component | **Implement** | `/component` |
-| Compose a whole page | **Compose** | `/page`, `/layout` |
+| Compose a whole page | **Compose** | `/inspo` → `/page`, `/layout` |
 | Generate design assets with AI | **Generate** | `/generate` |
 | Start or scale a design system | **Systematize** | `/tokens` |
 | Move a design into code | **Handoff** | `/figma` |
@@ -98,7 +98,8 @@ generator skipped now exists. Report the before/after score delta.
 
 1. `ux-research-methods` — what do we actually know about these users
 2. `cognitive-psychology-ux` — the constraints the design must respect
-3. `sector-style-intelligence` — what credible looks like in this category
+3. `sector-style-intelligence` — what credible looks like in this category; then
+   `reference-intelligence` — what award-level looks like right now, sourced and captured
 4. `screen-flow-patterns` — which screens exist and what connects them
 5. `ui-visual-design-system` — type, color, hierarchy, spacing
 6. `interaction-motion-design` — how it moves and responds
@@ -134,7 +135,8 @@ happy path is a mockup, not a design.
 
 ### Compose — building a whole page
 
-1. `sector-style-intelligence` — the register the page has to hit
+1. `sector-style-intelligence` — the register the page has to hit; `reference-intelligence`
+   when the bar is award-level (live Awwwards winners → Reference Board)
 2. `page-composition-engine` — block order, spacing rhythm, visual pacing
 3. `layout-block-intelligence` — the individual sections
 4. `micro-copy-intelligence` — headlines and body that carry the argument

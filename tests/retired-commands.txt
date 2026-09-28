@@ -13,7 +13,7 @@
 ground
 intent
 taste
-inspo
+# inspo: revived in v4.2.0 as live reference sourcing (Awwwards, Mobbin, MotionSites)
 pulse
 drip
 ship

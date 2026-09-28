@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "createdAt": "2026-09-28T00:00:00Z",
+  "brief": "Landing page for Kiln, a small-batch coffee roaster in San Antonio",
+  "primaryAction": "join the roast drop list",
+  "references": [
+    { "slug": "zeroz-brand-site", "source": "awwwards", "url": "https://otsuka-air.jp/", "award": "SOTD", "score": 7.41, "trait": "one accent, one house easing (79 of 85 transitions)", "dimension": "motion" },
+    { "slug": "santioni-spirits", "source": "awwwards", "url": "https://santionispirits.com/", "award": "Honorable Mention", "score": null, "trait": "a single lettered display word carries the first screen", "dimension": "typography" },
+    { "slug": "best-bean-best-cup", "source": "awwwards", "url": "https://bestbeanbestcup.com.au", "award": "Honorable Mention", "score": null, "trait": "warm paper surfaces alternating with full-bleed near-black bands", "dimension": "color" },
+    { "slug": "partake-foods", "source": "awwwards", "url": "https://partakefoods.com/", "award": "Honorable Mention", "score": null, "trait": "tilted sticker callouts with hard offset shadows", "dimension": "components" }
+  ],
+  "norm": ["big hero type", "smooth scroll", "single-column flow", "round controls", "product photo up top"],
+  "direction": {
+    "type": {
+      "display": { "family": "Fraunces", "sizeDesktop": "clamp(72px, 12vw, 184px)", "tracking": "-0.03em", "leading": 0.86, "weight": 900 },
+      "body": { "family": "Hanken Grotesk", "size": "18px", "leading": 1.6, "weight": 400 },
+      "contrastRatio": 10
+    },
+    "color": { "page": "#F3ECE1", "ink": "#1C1612", "muted": "#6F6358", "accent": "#E4572E", "blocking": "one roast band (the drop), one ember band (the list)" },
+    "rhythm": { "sectionPaddingY": { "desktop": 144, "phone": 88 }, "grid": 12, "container": 1200 },
+    "shape": { "radius": { "control": "0", "card": "0" }, "shadow": "4px 4px 0 #1C1612" },
+    "motion": { "smoothScroll": false, "easing": "cubic-bezier(0.3, 0.26, 0.38, 1)", "tempo": { "ui": "300ms", "reveal": "900ms" }, "signature": "the batch sticker slaps onto the hero once" }
+  },
+  "avoid": ["purple/blue gradient", "Inter", "three icon cards", "invented stat counters", "anonymous testimonials", "eyebrow badge", "modal or popup", "second CTA", "emoji icons"],
+  "rejected": [
+    { "trait": "WebGL product scene + 5,000px pinned chapters", "from": "zeroz-brand-site", "why": "spectacle competing with a one-field form" },
+    { "trait": "six font faces, four easings", "from": "partake-foods", "why": "contradicts the discipline taken from ZEROZ" },
+    { "trait": "full-width brand lockup", "from": "best-bean-best-cup", "why": "a second display moment fights the lettered hero" },
+    { "trait": "age gate + audio", "from": "santioni-spirits", "why": "no reason in this brief" }
+  ],
+  "medianScore": 7.41
+}

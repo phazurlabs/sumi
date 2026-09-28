@@ -72,6 +72,7 @@ list of reference apps.
 | `.sumi/vision.json` | `/grade` | visual direction, designer-DNA match, score |
 | `.sumi/wireframe-<screen>.json` | `/wireframe` | layout structure, component map |
 | `.sumi/generated-<asset>.json` | `/generate` | generation records, prompts, model, score |
+| `.sumi/refs/` | `/inspo` | sourced references, captures, `board.json`. Schema in `reference-intelligence/references/board-synthesis.md` |
 | `.sumi/decisions.log` | any command | append-only NDJSON: `{ts, command, decision, reason, overrides}` |
 
 ## Ownership
@@ -86,6 +87,7 @@ commands to share one file without clobbering each other.
 | `/type` | `tokens.typography` |
 | `/tokens` | `tokens.*` (serialization only; it does not decide) |
 | `/dark` | `tokens.$themes.dark` |
+| `/inspo` | `.sumi/refs/` only |
 | everything else | **read-only** |
 
 ## Read order
@@ -94,10 +96,11 @@ Broad to specific. Later files override earlier ones where they overlap.
 
 1. `brief.json` — who it is for and what problem it solves
 2. `map.json` — what screens exist
-3. `style.json` — what it looks like
-4. `vision.json` — the visual bar and DNA match
-5. `wireframe-<screen>.json` — the layout of the screen actually in play
-6. `decisions.log` — the running override log; the last entry wins
+3. `refs/board.json` — what the references say it should look like
+4. `style.json` — what it looks like (the decision; wins over the board)
+5. `vision.json` — the visual bar and DNA match
+6. `wireframe-<screen>.json` — the layout of the screen actually in play
+7. `decisions.log` — the running override log; the last entry wins
 
 ## Merge rules
 

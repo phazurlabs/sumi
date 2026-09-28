@@ -71,16 +71,18 @@ Every page is composed from an ordered sequence of blocks. Each block is a self-
 **Required input:**
 - Page type (e.g., "SaaS landing," "pricing page," "agency portfolio")
 
+**Reference Board:** if `.sumi/refs/board.json` exists (from `/inspo`), build against it. Its `direction` (type, color, rhythm, shape, motion) fills any gap `.sumi/style.json` leaves, and nothing on its `avoid` list may appear. Name the board trait each major section implements.
+
 **Optional inputs (with defaults):**
 - Sector: neutral (SaaS, fintech, healthcare, e-commerce, creative, etc.)
 - Brand name: "Acme" (used in placeholder content)
 - Primary CTA: "Get Started" (used across hero, CTA blocks, nav)
-- Color direction: neutral (or consume from `.sumi/style.json` / `/style` output)
+- Color direction: neutral (or consume from `.sumi/style.json`, then `.sumi/refs/board.json`)
 - Tone: professional (professional, playful, bold, minimal, premium)
 - Content density: moderate (sparse, moderate, dense)
 
 **Auto-resolve:**
-- Prior Sumi outputs: Consume `/style` (style), `/style` (design direction), `/palette` (colors), `/type` (typography) if available
+- Prior Sumi outputs: Consume `/style` (design direction), `/inspo` (Reference Board), `/palette` (colors), `/type` (typography) if available
 - Block order: Determined by page type (see Page Composition Recipes below)
 - Section spacing rhythm: Consistent vertical rhythm based on content density
 

@@ -52,7 +52,7 @@ Before generating anything, resolve the full picture:
 **Auto-resolve:**
 - Primary user task: What is the ONE thing the user must accomplish on this screen?
 - Cognitive load budget: Apply Miller's Law — each screen region gets 4-7 chunks max
-- Prior Sumi outputs: Check for `/style` (style direction), `/style` (reference patterns), `/benchmark` (competitive gaps). Consume if available; use neutral defaults and note what is missing if not
+- Prior Sumi outputs: Check for `/style` (style direction), `/inspo` (sourced references in `.sumi/refs/board.json` and `mobbin.json`), `/benchmark` (competitive gaps). Consume if available; use neutral defaults and note what is missing if not
 - Sector conventions: A fintech checkout differs from a food-delivery checkout in trust signals, data density, and regulatory constraints
 
 ### Step 2 — Research the Screen Type
@@ -254,7 +254,7 @@ Every layout shift must be defined in the code with actual Tailwind classes.
 
 ### Step 8 — Design Token Consumption
 
-If `.sumi/style.json` exists, consume it. Otherwise, provide a default token map:
+If `.sumi/style.json` exists, consume it; `.sumi/refs/board.json` fills anything it leaves open. Otherwise, provide a default token map:
 
 ```css
 :root {
