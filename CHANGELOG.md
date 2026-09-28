@@ -37,7 +37,17 @@ holds your build up against it.
 - **`.sumi/refs/`**, added to the design-memory contract, holding `board.json`.
   - `/inspo` owns this folder. `/style` stays the only writer of `style.json`, and it
     reads the board.
+- **`examples/before-after/`** is the proof: one brief, two builds.
+  - The before page is a stock agent build and scores 43.
+  - The after page was built against four Awwwards food & drink winners and scores 82.
+  - It includes the Reference Board and a grade sheet that explains every score.
+- **README** rebuilt around taste, with a new hero and a measured before/after card. The card is rendered from `assets/src/*.html` by `assets/src/render.mjs`.
 - **Routing fixtures** for reference requests. The routing score went from 20/22 to 22/24.
+
+### Fixed (found by dogfooding the before/after)
+
+- `capture.mjs` now gets past age gates, including clickable-`div` "Yes" buttons, and hides fixed email popups and their scrims. It re-checks before every screenshot, because gates can appear after a preloader finishes.
+- `capture.mjs` slugs now include the port and path. Before, two pages on one host (`localhost/before`, `localhost/after`) overwrote each other.
 
 ### Changed
 

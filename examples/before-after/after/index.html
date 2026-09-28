@@ -1,0 +1,153 @@
+<!doctype html>
+<!--
+  AFTER — same brief as ../before, built with Sumi:
+  /sumi:inspo (Awwwards food-drink, 4 kept) → .sumi/refs/board.md → /sumi:style → /sumi:page.
+  Every section names the board trait it implements.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kiln — small-batch coffee, San Antonio</title>
+<meta name="description" content="One small-batch roast a month from a San Antonio kiln. Join the drop list." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,900,100,1&family=Hanken+Grotesk:wght@400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --paper: #F3ECE1; --ink: #1C1612; --muted: #6F6358; --ember: #E4572E;
+    --display: 'Fraunces', Georgia, serif; --body: 'Hanken Grotesk', system-ui, sans-serif;
+    --curve: cubic-bezier(0.3, 0.26, 0.38, 1); --ui: 300ms; --reveal: 900ms;
+    --pad: 144px; --gutter: 32px; --shadow: 4px 4px 0 var(--ink);
+  }
+  @media (max-width: 720px) { :root { --pad: 88px; --gutter: 20px; } }
+  * { box-sizing: border-box; margin: 0; }
+  html { background: var(--paper); }
+  body { font: 400 18px/1.6 var(--body); color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 var(--gutter); }
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); }
+  .display { font-family: var(--display); font-weight: 900; font-variation-settings: 'SOFT' 100, 'WONK' 1, 'opsz' 144; letter-spacing: -0.03em; line-height: .86; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
+  .mark { font-family: var(--display); font-weight: 900; font-size: 28px; letter-spacing: -0.02em; color: var(--ink); text-decoration: none; }
+  .mark i { color: var(--ember); font-style: normal; }
+  nav a.jump { color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--ember); padding-bottom: 2px; transition: color var(--ui) var(--curve); }
+  nav a.jump:hover { color: var(--ember); }
+
+  /* Santioni: one lettered word carries the first screen */
+  .hero { position: relative; padding: 72px 0 var(--pad); }
+  .hero h1 { font-size: clamp(72px, 12vw, 184px); }
+  .hero h1 em { font-style: normal; color: var(--ember); }
+  .hero .lede { grid-column: 1 / span 6; margin-top: 48px; max-width: 30ch; font-size: 22px; line-height: 1.45; }
+  .hero form { grid-column: 8 / span 5; align-self: end; }
+
+  /* Partake: the sticker, squared off, slapped on once */
+  .sticker { position: absolute; right: 4%; top: 88px; padding: 18px 22px; background: var(--ember); color: var(--ink);
+             font: 400 15px/1.35 var(--body); letter-spacing: .02em; box-shadow: var(--shadow); transform: rotate(8deg);
+             animation: slap var(--reveal) var(--curve) .4s both; }
+  .sticker b { display: block; font: 900 30px/1 var(--display); font-variation-settings: 'SOFT' 100, 'WONK' 1; letter-spacing: -0.02em; margin-bottom: 6px; }
+  @keyframes slap { from { opacity: 0; transform: rotate(-14deg) scale(1.6); } to { opacity: 1; transform: rotate(8deg) scale(1); } }
+
+  form { display: grid; grid-template-columns: 1fr auto; gap: 12px; }
+  label { grid-column: 1 / -1; font-size: 15px; color: var(--muted); }
+  input { font: inherit; padding: 16px 18px; border: 2px solid var(--ink); background: var(--paper); color: var(--ink); border-radius: 0; min-width: 0; }
+  input:focus-visible { outline: 3px solid var(--ember); outline-offset: 2px; }
+  button { font: inherit; padding: 16px 24px; border: 2px solid var(--ink); background: var(--ink); color: var(--paper); border-radius: 0; cursor: pointer;
+           box-shadow: var(--shadow); transition: transform var(--ui) var(--curve), box-shadow var(--ui) var(--curve); }
+  button:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ember); }
+  button:active { transform: translate(2px, 2px); box-shadow: 0 0 0 var(--ink); }
+
+  /* Best Bean: paper and roast bands */
+  .band { background: var(--ink); color: var(--paper); padding: var(--pad) 0; }
+  .band h2 { grid-column: 1 / span 7; font-size: clamp(48px, 7vw, 104px); }
+  .band dl { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--gutter); margin-top: 72px; border-top: 1px solid rgba(243,236,225,.25); }
+  .band dt { font-size: 15px; color: #B8AC9E; padding-top: 20px; }
+  .band dd { font: 900 34px/1.1 var(--display); font-variation-settings: 'SOFT' 100, 'WONK' 1; margin-top: 8px; }
+
+  .why { padding: var(--pad) 0; }
+  .why h2 { grid-column: 1 / span 5; font-size: clamp(44px, 5.5vw, 80px); }
+  .why ol { grid-column: 7 / span 6; list-style: none; padding: 0; counter-reset: s; }
+  .why li { counter-increment: s; padding: 24px 0; border-top: 2px solid var(--ink); display: grid; grid-template-columns: 56px 1fr; }
+  .why li::before { content: counter(s, decimal-leading-zero); color: var(--ember); }
+
+  .list { background: var(--ember); color: var(--ink); padding: var(--pad) 0; }
+  .list h2 { grid-column: 1 / span 7; font-size: clamp(56px, 8vw, 128px); }
+  .list form { grid-column: 8 / span 5; align-self: end; }
+  .list label { color: var(--ink); }
+  .list input { background: var(--paper); }
+
+  footer { padding: 40px 0; font-size: 15px; color: var(--muted); }
+  footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+  .rise { opacity: 0; transform: translateY(24px); transition: opacity var(--reveal) var(--curve), transform var(--reveal) var(--curve); }
+  .rise.in { opacity: 1; transform: none; }
+
+  @media (max-width: 900px) {
+    .hero .lede, .hero form, .band h2, .why h2, .why ol, .list h2, .list form { grid-column: 1 / -1; }
+    .band dl { grid-template-columns: 1fr; }
+    .sticker { position: relative; right: auto; top: auto; display: inline-block; margin-bottom: 32px; }
+    form { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .rise { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <nav><a class="mark" href="#">kiln<i>.</i></a><a class="jump" href="#join">Join the drop</a></nav>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="sticker" aria-hidden="true"><b>Batch 014</b>Guji, Ethiopia<br />roasted Friday</div>
+      <h1 class="display">Small fire.<br />Big <em>coffee.</em></h1>
+      <div class="grid">
+        <p class="lede">One roast a month from a garage kiln on the East Side of San Antonio. Forty bags. Gone when they're gone.</p>
+        <form onsubmit="return false" aria-label="Join the drop list">
+          <label for="e1">Get the drop the morning it's roasted.</label>
+          <input id="e1" type="email" autocomplete="email" placeholder="you@email.com" required />
+          <button type="submit">Join the drop</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <section class="band" aria-labelledby="drop">
+    <div class="wrap grid">
+      <h2 id="drop" class="display rise">This month's drop.</h2>
+      <dl class="rise">
+        <div><dt>Origin</dt><dd>Guji, Ethiopia</dd></div>
+        <div><dt>Roast</dt><dd>Light, 11 minutes</dd></div>
+        <div><dt>Tastes like</dt><dd>Peach, jasmine, raw honey</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap grid">
+      <h2 class="display rise">Why one roast a month.</h2>
+      <ol class="rise">
+        <li>We buy one lot we love instead of ten we tolerate.</li>
+        <li>Forty bags is what the kiln does well in a day. We don't push it.</li>
+        <li>It ships the morning it rests. Your bag is never older than a week.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="list" id="join" aria-labelledby="join-h">
+    <div class="wrap grid">
+      <h2 id="join-h" class="display rise">Next drop: first Friday.</h2>
+      <form onsubmit="return false" aria-label="Join the drop list" class="rise">
+        <label for="e2">One email a month. Nothing else.</label>
+        <input id="e2" type="email" autocomplete="email" placeholder="you@email.com" required />
+        <button type="submit">Join the drop</button>
+      </form>
+    </div>
+  </section>
+
+  <footer><div class="wrap"><span>kiln. · San Antonio, TX</span><span>A demo brand built by Sumi. Not a real roaster.</span></div></footer>
+
+  <script>
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.2 });
+    document.querySelectorAll('.rise').forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,637 @@
+{
+  "slug": "partake-foods",
+  "url": "https://partakefoods.com/",
+  "source": "awwwards",
+  "award": "Honorable Mention",
+  "score": null,
+  "awwwards": "https://www.awwwards.com/sites/partake-foods",
+  "tags": [
+    "e-commerce",
+    "food-drink",
+    "colorful",
+    "navigation",
+    "animation",
+    "gsap",
+    "shopify"
+  ],
+  "capturedAt": "2026-09-28T13:18:15.772Z",
+  "shots": [
+    "desktop-0.jpg",
+    "desktop-1.jpg",
+    "desktop-2.jpg",
+    "desktop-3.jpg",
+    "phone-0.jpg",
+    "phone-1.jpg",
+    "phone-2.jpg"
+  ],
+  "dna": {
+    "desktop": {
+      "title": "Partake Foods | Super Delicious Cookies",
+      "description": "Gluten-free, vegan, non-GMO and free of the top 14 allergens, our super delicious cookies are made with real, healthy, and safe ingredients that everyone can share and enjoy. Choose from multiple flavors including carrot oat, chocolate chip, double chocolate, and sweet potato millet.",
+      "pageHeight": 7715,
+      "sectionCount": 13,
+      "theme": "light",
+      "type": {
+        "display": {
+          "family": "Arial",
+          "sizes": [
+            40,
+            14
+          ],
+          "weight": "400",
+          "lineHeight": 1.3,
+          "tracking": "0.043em",
+          "transform": "none",
+          "count": 2
+        },
+        "heading": {
+          "family": "Bunch-Bold",
+          "sizes": [
+            86,
+            27,
+            13
+          ],
+          "weight": "400",
+          "lineHeight": 1,
+          "tracking": "0.007em",
+          "transform": "none",
+          "count": 23
+        },
+        "body": {
+          "family": "Gilroy-Medium",
+          "sizes": [
+            34,
+            33,
+            30,
+            27,
+            23,
+            20
+          ],
+          "weight": "400",
+          "lineHeight": 1.2,
+          "tracking": "0",
+          "transform": "none",
+          "count": 34
+        },
+        "ui": {
+          "family": "Poppins-Klaviyo-Hosted",
+          "sizes": [
+            27,
+            22,
+            20,
+            16,
+            15,
+            14
+          ],
+          "weight": "700",
+          "lineHeight": 1,
+          "tracking": "0",
+          "transform": "none",
+          "count": 17
+        },
+        "loadedFaces": [
+          "Bunch-Bold bold",
+          "Gilroy-Medium 500",
+          "Toroka-CondensedBold bold",
+          "Toroka-Black bold",
+          "Gellix 700",
+          "Gellix 500",
+          "Poppins-Klaviyo-Hosted 400",
+          "Poppins-Klaviyo-Hosted 700"
+        ]
+      },
+      "color": {
+        "pageBackground": "rgb(255, 246, 235)",
+        "backgrounds": [
+          {
+            "color": "rgb(255, 246, 235)",
+            "share": 0.54
+          },
+          {
+            "color": "rgba(0, 85, 155, 0.1)",
+            "share": 0.117
+          },
+          {
+            "color": "rgba(20, 20, 20, 0.6)",
+            "share": 0.117
+          },
+          {
+            "color": "rgb(0, 85, 155)",
+            "share": 0.115
+          },
+          {
+            "color": "rgb(130, 216, 231)",
+            "share": 0.108
+          },
+          {
+            "color": "rgb(0, 158, 222)",
+            "share": 0.096
+          },
+          {
+            "color": "rgb(190, 0, 139)",
+            "share": 0.093
+          },
+          {
+            "color": "rgb(244, 192, 214)",
+            "share": 0.065
+          }
+        ],
+        "text": [
+          {
+            "color": "rgb(255, 246, 235)",
+            "count": 42
+          },
+          {
+            "color": "rgb(255, 119, 0)",
+            "count": 42
+          },
+          {
+            "color": "rgb(0, 85, 155)",
+            "count": 15
+          },
+          {
+            "color": "rgb(255, 205, 120)",
+            "count": 15
+          },
+          {
+            "color": "rgb(188, 0, 65)",
+            "count": 5
+          },
+          {
+            "color": "rgb(190, 0, 139)",
+            "count": 4
+          }
+        ]
+      },
+      "spacing": {
+        "sectionPaddingY": [],
+        "sectionHeights": [
+          900,
+          51,
+          1119,
+          741,
+          1350,
+          795,
+          1029,
+          183,
+          560,
+          152,
+          51,
+          644,
+          644
+        ],
+        "gaps": [
+          [
+            "30px",
+            12
+          ],
+          [
+            "40px",
+            5
+          ],
+          [
+            "20px",
+            4
+          ],
+          [
+            "10px",
+            3
+          ],
+          [
+            "28.8px",
+            2
+          ],
+          [
+            "6px",
+            1
+          ]
+        ]
+      },
+      "layout": {
+        "viewport": 1440,
+        "containerMaxWidths": [
+          [
+            "385px",
+            15
+          ],
+          [
+            "1900px",
+            7
+          ],
+          [
+            "60px",
+            6
+          ],
+          [
+            "450px",
+            5
+          ]
+        ],
+        "gridCount": 33,
+        "flexCount": 248,
+        "gridTemplates": [
+          [
+            "1 cols",
+            30
+          ],
+          [
+            "3 cols",
+            2
+          ],
+          [
+            "12 cols",
+            1
+          ]
+        ]
+      },
+      "shape": {
+        "radii": [
+          [
+            "20px",
+            67
+          ],
+          [
+            "50%",
+            13
+          ],
+          [
+            "7.5px",
+            4
+          ],
+          [
+            "50px",
+            3
+          ],
+          [
+            "10px",
+            2
+          ]
+        ]
+      },
+      "motion": {
+        "stack": {
+          "gsap": true,
+          "scrollTrigger": true,
+          "lenis": false,
+          "locomotive": false,
+          "three": false,
+          "webgl": false,
+          "framer": false,
+          "webflow": false,
+          "barba": false,
+          "swiper": false,
+          "lottie": false
+        },
+        "canvases": 0,
+        "videos": 0,
+        "easings": [
+          [
+            "ease",
+            102
+          ],
+          [
+            "cubic-bezier(0.4, 0, 0.2, 1)",
+            25
+          ],
+          [
+            "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+            16
+          ],
+          [
+            "cubic-bezier(0.25, 0.8, 0.25, 1)",
+            3
+          ]
+        ],
+        "durations": [
+          [
+            "0.3s",
+            59
+          ],
+          [
+            "0.2s",
+            55
+          ],
+          [
+            "0.4s",
+            19
+          ],
+          [
+            "0.1s",
+            13
+          ]
+        ]
+      },
+      "counts": {
+        "images": 134,
+        "links": 88,
+        "buttons": 19,
+        "forms": 4
+      }
+    },
+    "phone": {
+      "title": "Partake Foods | Super Delicious Cookies",
+      "description": "Gluten-free, vegan, non-GMO and free of the top 14 allergens, our super delicious cookies are made with real, healthy, and safe ingredients that everyone can share and enjoy. Choose from multiple flavors including carrot oat, chocolate chip, double chocolate, and sweet potato millet.",
+      "pageHeight": 6012,
+      "sectionCount": 13,
+      "theme": "light",
+      "type": {
+        "display": {
+          "family": "Arial",
+          "sizes": [
+            30,
+            14
+          ],
+          "weight": "400",
+          "lineHeight": 1.3,
+          "tracking": "0.043em",
+          "transform": "none",
+          "count": 2
+        },
+        "heading": {
+          "family": "Bunch-Bold",
+          "sizes": [
+            62,
+            39,
+            18,
+            12
+          ],
+          "weight": "400",
+          "lineHeight": 1,
+          "tracking": "0.015em",
+          "transform": "none",
+          "count": 23
+        },
+        "body": {
+          "family": "Gilroy-Medium",
+          "sizes": [
+            25,
+            20,
+            18,
+            16,
+            15,
+            14
+          ],
+          "weight": "400",
+          "lineHeight": 1.2,
+          "tracking": "0",
+          "transform": "none",
+          "count": 32
+        },
+        "ui": {
+          "family": "Poppins-Klaviyo-Hosted",
+          "sizes": [
+            25,
+            20,
+            16,
+            15,
+            14,
+            13
+          ],
+          "weight": "700",
+          "lineHeight": 1,
+          "tracking": "0",
+          "transform": "none",
+          "count": 26
+        },
+        "loadedFaces": [
+          "Bunch-Bold bold",
+          "Gilroy-Medium 500",
+          "Toroka-CondensedBold bold",
+          "Toroka-Black bold",
+          "Gellix 700",
+          "Gellix 500",
+          "Poppins-Klaviyo-Hosted 400",
+          "Poppins-Klaviyo-Hosted 700"
+        ]
+      },
+      "color": {
+        "pageBackground": "rgb(255, 246, 235)",
+        "backgrounds": [
+          {
+            "color": "rgb(255, 246, 235)",
+            "share": 0.49
+          },
+          {
+            "color": "rgb(0, 85, 155)",
+            "share": 0.23
+          },
+          {
+            "color": "rgb(130, 216, 231)",
+            "share": 0.197
+          },
+          {
+            "color": "rgba(20, 20, 20, 0.6)",
+            "share": 0.14
+          },
+          {
+            "color": "rgba(0, 85, 155, 0.1)",
+            "share": 0.135
+          },
+          {
+            "color": "rgb(190, 0, 139)",
+            "share": 0.129
+          },
+          {
+            "color": "rgb(244, 192, 214)",
+            "share": 0.112
+          },
+          {
+            "color": "rgb(0, 158, 222)",
+            "share": 0.096
+          }
+        ],
+        "text": [
+          {
+            "color": "rgb(255, 246, 235)",
+            "count": 44
+          },
+          {
+            "color": "rgb(255, 119, 0)",
+            "count": 43
+          },
+          {
+            "color": "rgb(0, 85, 155)",
+            "count": 15
+          },
+          {
+            "color": "rgb(255, 205, 120)",
+            "count": 15
+          },
+          {
+            "color": "rgb(190, 0, 139)",
+            "count": 5
+          },
+          {
+            "color": "rgb(188, 0, 65)",
+            "count": 5
+          }
+        ]
+      },
+      "spacing": {
+        "sectionPaddingY": [],
+        "sectionHeights": [
+          810,
+          39,
+          747,
+          459,
+          823,
+          788,
+          669,
+          152,
+          310,
+          114,
+          39,
+          910,
+          910
+        ],
+        "gaps": [
+          [
+            "10px",
+            18
+          ],
+          [
+            "20px",
+            14
+          ],
+          [
+            "15px",
+            1
+          ],
+          [
+            "12.5px",
+            1
+          ],
+          [
+            "6px",
+            1
+          ],
+          [
+            "7.8px",
+            1
+          ]
+        ]
+      },
+      "layout": {
+        "viewport": 390,
+        "containerMaxWidths": [
+          [
+            "200px",
+            40
+          ],
+          [
+            "1900px",
+            8
+          ],
+          [
+            "40px",
+            6
+          ],
+          [
+            "450px",
+            5
+          ]
+        ],
+        "gridCount": 39,
+        "flexCount": 254,
+        "gridTemplates": [
+          [
+            "1 cols",
+            36
+          ],
+          [
+            "3 cols",
+            2
+          ],
+          [
+            "2 cols",
+            1
+          ]
+        ]
+      },
+      "shape": {
+        "radii": [
+          [
+            "10px",
+            62
+          ],
+          [
+            "20px",
+            17
+          ],
+          [
+            "50%",
+            16
+          ],
+          [
+            "8px",
+            4
+          ],
+          [
+            "7.5px",
+            3
+          ]
+        ]
+      },
+      "motion": {
+        "stack": {
+          "gsap": true,
+          "scrollTrigger": true,
+          "lenis": false,
+          "locomotive": false,
+          "three": false,
+          "webgl": false,
+          "framer": false,
+          "webflow": false,
+          "barba": false,
+          "swiper": false,
+          "lottie": false
+        },
+        "canvases": 0,
+        "videos": 0,
+        "easings": [
+          [
+            "ease",
+            110
+          ],
+          [
+            "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+            16
+          ],
+          [
+            "cubic-bezier(0.4, 0, 0.2, 1)",
+            8
+          ],
+          [
+            "cubic-bezier(0.25, 0.8, 0.25, 1)",
+            3
+          ]
+        ],
+        "durations": [
+          [
+            "0.3s",
+            61
+          ],
+          [
+            "0.2s",
+            48
+          ],
+          [
+            "0.4s",
+            19
+          ],
+          [
+            "0.1s",
+            8
+          ]
+        ]
+      },
+      "counts": {
+        "images": 133,
+        "links": 88,
+        "buttons": 19,
+        "forms": 4
+      }
+    }
+  },
+  "ok": true
+}

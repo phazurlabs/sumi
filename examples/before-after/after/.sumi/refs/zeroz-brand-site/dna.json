@@ -1,0 +1,458 @@
+{
+  "slug": "zeroz-brand-site",
+  "url": "https://otsuka-air.jp/",
+  "source": "awwwards",
+  "award": "SOTD",
+  "score": 7.41,
+  "awwwards": "https://www.awwwards.com/sites/zeroz-brand-site",
+  "tags": [
+    "e-commerce",
+    "food-drink",
+    "technology",
+    "scrolling",
+    "typography",
+    "storytelling",
+    "3d",
+    "header-design",
+    "microinteractions",
+    "webgl",
+    "three-js",
+    "blender"
+  ],
+  "capturedAt": "2026-09-28T13:15:58.896Z",
+  "shots": [
+    "desktop-0.jpg",
+    "desktop-1.jpg",
+    "desktop-2.jpg",
+    "desktop-3.jpg",
+    "phone-0.jpg",
+    "phone-1.jpg",
+    "phone-2.jpg"
+  ],
+  "dna": {
+    "desktop": {
+      "title": "/zeroz（ゼロズ）公式サイト | 大塚製薬",
+      "description": "大塚製薬は、からだ本来の力を呼び覚ます、“Active Inner Resource”という思想にたどり着きました。その思想を形にしたのが、酸素を活かす成分「ケンフェロール」を含有したセルフコンディショニングフード「/zeroz（ゼロズ）」です。",
+      "pageHeight": 44335,
+      "sectionCount": 12,
+      "theme": "dark",
+      "type": {
+        "display": {
+          "family": "ui-sans-serif",
+          "sizes": [
+            16
+          ],
+          "weight": "400",
+          "lineHeight": 1.5,
+          "tracking": "0",
+          "transform": "none",
+          "count": 1
+        },
+        "heading": {
+          "family": "TazuganeGothicStdN-Medium",
+          "sizes": [
+            30
+          ],
+          "weight": "400",
+          "lineHeight": 1.8,
+          "tracking": "0.200em",
+          "transform": "none",
+          "count": 13
+        },
+        "body": {
+          "family": "TazuganeGothicStdN-Regular",
+          "sizes": [
+            80,
+            40,
+            30,
+            20,
+            18,
+            15
+          ],
+          "weight": "400",
+          "lineHeight": 2,
+          "tracking": "0.100em",
+          "transform": "none",
+          "count": 40
+        },
+        "ui": {
+          "family": "ui-sans-serif",
+          "sizes": [
+            16,
+            15
+          ],
+          "weight": "400",
+          "lineHeight": 1.5,
+          "tracking": "0",
+          "transform": "none",
+          "count": 13
+        },
+        "loadedFaces": [
+          "fpbf_ac93d8111 normal",
+          "TazuganeGothicStdN-Regular bold",
+          "HelveticaNowDisplay-Regular bold",
+          "TazuganeGothicStdN-Medium bold",
+          "IwaOGoPro-Db bold",
+          "TazuganeGothicStdN-Bold bold"
+        ]
+      },
+      "color": {
+        "pageBackground": "rgb(17, 19, 18)",
+        "backgrounds": [
+          {
+            "color": "rgb(0, 168, 82)",
+            "share": 0.037
+          },
+          {
+            "color": "rgb(255, 255, 255)",
+            "share": 0.013
+          },
+          {
+            "color": "rgb(169, 177, 174)",
+            "share": 0.003
+          }
+        ],
+        "text": [
+          {
+            "color": "rgb(255, 255, 255)",
+            "count": 83
+          },
+          {
+            "color": "rgb(0, 0, 0)",
+            "count": 54
+          },
+          {
+            "color": "rgb(17, 19, 18)",
+            "count": 35
+          },
+          {
+            "color": "rgb(0, 168, 82)",
+            "count": 11
+          }
+        ]
+      },
+      "spacing": {
+        "sectionPaddingY": [
+          34,
+          60
+        ],
+        "sectionHeights": [
+          1,
+          2250,
+          5850,
+          5175,
+          900,
+          5175,
+          6450,
+          5325,
+          4500,
+          5150,
+          469,
+          861
+        ],
+        "gaps": [
+          [
+            "4px",
+            8
+          ],
+          [
+            "6px",
+            5
+          ],
+          [
+            "14px",
+            3
+          ],
+          [
+            "20px",
+            2
+          ],
+          [
+            "30px",
+            1
+          ],
+          [
+            "10px",
+            1
+          ]
+        ]
+      },
+      "layout": {
+        "viewport": 1440,
+        "containerMaxWidths": [
+          [
+            "463px",
+            1
+          ]
+        ],
+        "gridCount": 38,
+        "flexCount": 128,
+        "gridTemplates": [
+          [
+            "1 cols",
+            38
+          ]
+        ]
+      },
+      "shape": {
+        "radii": [
+          [
+            "9999px",
+            6
+          ]
+        ]
+      },
+      "motion": {
+        "stack": {
+          "gsap": false,
+          "scrollTrigger": false,
+          "lenis": true,
+          "locomotive": false,
+          "three": true,
+          "webgl": true,
+          "framer": false,
+          "webflow": false,
+          "barba": true,
+          "swiper": false,
+          "lottie": false
+        },
+        "canvases": 1,
+        "videos": 8,
+        "easings": [
+          [
+            "cubic-bezier(0.3, 0.26, 0.38, 1)",
+            79
+          ],
+          [
+            "cubic-bezier(0.47, 0.16, 0.24, 1)",
+            6
+          ]
+        ],
+        "durations": [
+          [
+            "0.3s",
+            70
+          ],
+          [
+            "0.5s",
+            11
+          ],
+          [
+            "1s",
+            4
+          ]
+        ]
+      },
+      "counts": {
+        "images": 66,
+        "links": 82,
+        "buttons": 16,
+        "forms": 0
+      }
+    },
+    "phone": {
+      "title": "/zeroz（ゼロズ）公式サイト | 大塚製薬",
+      "description": "大塚製薬は、からだ本来の力を呼び覚ます、“Active Inner Resource”という思想にたどり着きました。その思想を形にしたのが、酸素を活かす成分「ケンフェロール」を含有したセルフコンディショニングフード「/zeroz（ゼロズ）」です。",
+      "pageHeight": 27968,
+      "sectionCount": 13,
+      "theme": "dark",
+      "type": {
+        "display": {
+          "family": "ui-sans-serif",
+          "sizes": [
+            16
+          ],
+          "weight": "400",
+          "lineHeight": 1.5,
+          "tracking": "0",
+          "transform": "none",
+          "count": 1
+        },
+        "heading": {
+          "family": "TazuganeGothicStdN-Medium",
+          "sizes": [
+            20
+          ],
+          "weight": "400",
+          "lineHeight": 1.6,
+          "tracking": "0.200em",
+          "transform": "none",
+          "count": 9
+        },
+        "body": {
+          "family": "TazuganeGothicStdN-Regular",
+          "sizes": [
+            48,
+            30,
+            20,
+            18,
+            15,
+            14
+          ],
+          "weight": "400",
+          "lineHeight": 2,
+          "tracking": "0.100em",
+          "transform": "none",
+          "count": 40
+        },
+        "ui": {
+          "family": "ui-sans-serif",
+          "sizes": [
+            36,
+            16
+          ],
+          "weight": "400",
+          "lineHeight": 1.5,
+          "tracking": "0",
+          "transform": "none",
+          "count": 11
+        },
+        "loadedFaces": [
+          "fpbf_ac93d8111 normal",
+          "TazuganeGothicStdN-Regular bold",
+          "HelveticaNowDisplay-Regular bold",
+          "TazuganeGothicStdN-Medium bold",
+          "IwaOGoPro-Db bold",
+          "TazuganeGothicStdN-Bold bold"
+        ]
+      },
+      "color": {
+        "pageBackground": "rgb(17, 19, 18)",
+        "backgrounds": [
+          {
+            "color": "rgb(0, 168, 82)",
+            "share": 0.087
+          },
+          {
+            "color": "rgb(255, 255, 255)",
+            "share": 0.036
+          },
+          {
+            "color": "rgb(169, 177, 174)",
+            "share": 0.007
+          }
+        ],
+        "text": [
+          {
+            "color": "rgb(255, 255, 255)",
+            "count": 84
+          },
+          {
+            "color": "rgb(0, 0, 0)",
+            "count": 54
+          },
+          {
+            "color": "rgb(17, 19, 18)",
+            "count": 26
+          },
+          {
+            "color": "rgb(0, 168, 82)",
+            "count": 3
+          }
+        ]
+      },
+      "spacing": {
+        "sectionPaddingY": [
+          24,
+          60
+        ],
+        "sectionHeights": [
+          1,
+          2110,
+          3967,
+          3756,
+          844,
+          3756,
+          4220,
+          3756,
+          3798,
+          4098,
+          52,
+          392,
+          824
+        ],
+        "gaps": [
+          [
+            "10px",
+            12
+          ],
+          [
+            "4px",
+            9
+          ],
+          [
+            "14px",
+            2
+          ],
+          [
+            "20px",
+            1
+          ],
+          [
+            "30px",
+            1
+          ],
+          [
+            "60px",
+            1
+          ]
+        ]
+      },
+      "layout": {
+        "viewport": 390,
+        "containerMaxWidths": [],
+        "gridCount": 38,
+        "flexCount": 120,
+        "gridTemplates": [
+          [
+            "1 cols",
+            38
+          ]
+        ]
+      },
+      "shape": {
+        "radii": []
+      },
+      "motion": {
+        "stack": {
+          "gsap": false,
+          "scrollTrigger": false,
+          "lenis": true,
+          "locomotive": false,
+          "three": true,
+          "webgl": true,
+          "framer": false,
+          "webflow": false,
+          "barba": true,
+          "swiper": false,
+          "lottie": false
+        },
+        "canvases": 1,
+        "videos": 8,
+        "easings": [
+          [
+            "cubic-bezier(0.3, 0.26, 0.38, 1)",
+            65
+          ]
+        ],
+        "durations": [
+          [
+            "0.3s",
+            56
+          ],
+          [
+            "0.5s",
+            9
+          ]
+        ]
+      },
+      "counts": {
+        "images": 58,
+        "links": 82,
+        "buttons": 16,
+        "forms": 0
+      }
+    }
+  },
+  "ok": true
+}

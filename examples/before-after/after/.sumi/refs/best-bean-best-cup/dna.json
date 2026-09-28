@@ -1,0 +1,621 @@
+{
+  "slug": "best-bean-best-cup",
+  "url": "https://bestbeanbestcup.com.au",
+  "source": "awwwards",
+  "award": "Honorable Mention",
+  "score": null,
+  "awwwards": "https://www.awwwards.com/sites/best-bean-best-cup",
+  "tags": [
+    "art-illustration",
+    "food-drink",
+    "web-interactive",
+    "animation",
+    "3d",
+    "ui-design",
+    "figma",
+    "blender",
+    "after-effects"
+  ],
+  "capturedAt": "2026-09-28T13:22:03.803Z",
+  "shots": [
+    "desktop-0.jpg",
+    "desktop-1.jpg",
+    "desktop-2.jpg",
+    "desktop-3.jpg",
+    "phone-0.jpg",
+    "phone-1.jpg",
+    "phone-2.jpg"
+  ],
+  "dna": {
+    "desktop": {
+      "title": "Vietnamese Coffee Roasters Australia | Best Bean Best Cup",
+      "description": "Authentic Vietnamese coffee beans, freshly roasted in Melbourne. From bold Vietnamese Robusta to our Vina House blend, Best Bean Best Cup brings Vietnam’s coffee heritage together with Melbourne roasting craftsmanship. Shop online, visit our Keilor Park roastery, or enquire about wholesale Vietnamese coffee.",
+      "pageHeight": 7325,
+      "sectionCount": 9,
+      "theme": "light",
+      "type": {
+        "display": {
+          "family": "Helvetica Now Display",
+          "sizes": [
+            56
+          ],
+          "weight": "500",
+          "lineHeight": "normal",
+          "tracking": "0.011em",
+          "transform": "uppercase",
+          "count": 1
+        },
+        "heading": {
+          "family": "Helvetica Now Display",
+          "sizes": [
+            72,
+            48,
+            32,
+            24
+          ],
+          "weight": "500",
+          "lineHeight": 1.1,
+          "tracking": "-0.010em",
+          "transform": "none",
+          "count": 17
+        },
+        "body": {
+          "family": "Manrope",
+          "sizes": [
+            24,
+            16,
+            14
+          ],
+          "weight": "500",
+          "lineHeight": 1.45,
+          "tracking": "0",
+          "transform": "none",
+          "count": 5
+        },
+        "ui": {
+          "family": "Helvetica Now Display",
+          "sizes": [
+            24,
+            16,
+            15,
+            13
+          ],
+          "weight": "500",
+          "lineHeight": "normal",
+          "tracking": "0.037em",
+          "transform": "none",
+          "count": 23
+        },
+        "loadedFaces": [
+          "Helvetica Now Display 400",
+          "Helvetica Now Display 700",
+          "Helvetica Now Display 500",
+          "Manrope 200 800"
+        ]
+      },
+      "color": {
+        "pageBackground": "rgb(255, 255, 255)",
+        "backgrounds": [
+          {
+            "color": "rgb(255, 255, 255)",
+            "share": 0.435
+          },
+          {
+            "color": "rgb(248, 248, 239)",
+            "share": 0.199
+          },
+          {
+            "color": "rgb(0, 0, 0)",
+            "share": 0.151
+          },
+          {
+            "color": "rgb(245, 240, 232)",
+            "share": 0.126
+          },
+          {
+            "color": "rgb(243, 246, 249)",
+            "share": 0.071
+          },
+          {
+            "color": "rgb(243, 142, 161)",
+            "share": 0.061
+          },
+          {
+            "color": "rgb(232, 120, 48)",
+            "share": 0.061
+          },
+          {
+            "color": "rgb(67, 82, 183)",
+            "share": 0.061
+          }
+        ],
+        "text": [
+          {
+            "color": "rgb(255, 255, 255)",
+            "count": 28
+          },
+          {
+            "color": "rgb(21, 21, 21)",
+            "count": 22
+          },
+          {
+            "color": "rgb(64, 64, 64)",
+            "count": 16
+          },
+          {
+            "color": "rgb(159, 159, 159)",
+            "count": 16
+          },
+          {
+            "color": "rgb(12, 14, 2)",
+            "count": 6
+          },
+          {
+            "color": "rgba(255, 255, 255, 0.45)",
+            "count": 4
+          }
+        ]
+      },
+      "spacing": {
+        "sectionPaddingY": [],
+        "sectionHeights": [
+          852,
+          80,
+          900,
+          887,
+          1660,
+          620,
+          381,
+          791,
+          1109
+        ],
+        "gaps": [
+          [
+            "10px",
+            22
+          ],
+          [
+            "20px",
+            19
+          ],
+          [
+            "8px",
+            14
+          ],
+          [
+            "16px",
+            10
+          ],
+          [
+            "12px",
+            10
+          ],
+          [
+            "6px",
+            9
+          ]
+        ]
+      },
+      "layout": {
+        "viewport": 1440,
+        "containerMaxWidths": [
+          [
+            "50px",
+            1
+          ],
+          [
+            "991px",
+            1
+          ],
+          [
+            "450px",
+            1
+          ],
+          [
+            "160px",
+            1
+          ]
+        ],
+        "gridCount": 15,
+        "flexCount": 236,
+        "gridTemplates": [
+          [
+            "1 cols",
+            8
+          ],
+          [
+            "8 cols",
+            2
+          ],
+          [
+            "3 cols",
+            1
+          ],
+          [
+            "12 cols",
+            1
+          ]
+        ]
+      },
+      "shape": {
+        "radii": [
+          [
+            "50%",
+            22
+          ],
+          [
+            "16px",
+            18
+          ],
+          [
+            "4px",
+            9
+          ],
+          [
+            "24px",
+            9
+          ],
+          [
+            "100px",
+            7
+          ]
+        ]
+      },
+      "motion": {
+        "stack": {
+          "gsap": true,
+          "scrollTrigger": true,
+          "lenis": false,
+          "locomotive": false,
+          "three": false,
+          "webgl": false,
+          "framer": false,
+          "webflow": false,
+          "barba": false,
+          "swiper": false,
+          "lottie": true
+        },
+        "canvases": 1,
+        "videos": 2,
+        "easings": [
+          [
+            "ease",
+            47
+          ],
+          [
+            "cubic-bezier(0.4, 0, 0.2, 1)",
+            17
+          ],
+          [
+            "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+            7
+          ],
+          [
+            "cubic-bezier(0.52, 0, 0.61, 0.99)",
+            1
+          ]
+        ],
+        "durations": [
+          [
+            "0.2s",
+            28
+          ],
+          [
+            "0.6s",
+            17
+          ],
+          [
+            "0.3s",
+            13
+          ],
+          [
+            "0.1s",
+            8
+          ]
+        ]
+      },
+      "counts": {
+        "images": 119,
+        "links": 95,
+        "buttons": 53,
+        "forms": 11
+      }
+    },
+    "phone": {
+      "title": "Vietnamese Coffee Roasters Australia | Best Bean Best Cup",
+      "description": "Authentic Vietnamese coffee beans, freshly roasted in Melbourne. From bold Vietnamese Robusta to our Vina House blend, Best Bean Best Cup brings Vietnam’s coffee heritage together with Melbourne roasting craftsmanship. Shop online, visit our Keilor Park roastery, or enquire about wholesale Vietnamese coffee.",
+      "pageHeight": 8459,
+      "sectionCount": 9,
+      "theme": "light",
+      "type": {
+        "display": {
+          "family": "Helvetica Now Display",
+          "sizes": [
+            26
+          ],
+          "weight": "500",
+          "lineHeight": "normal",
+          "tracking": "0.023em",
+          "transform": "uppercase",
+          "count": 1
+        },
+        "heading": {
+          "family": "Helvetica Now Display",
+          "sizes": [
+            32,
+            28,
+            24,
+            16
+          ],
+          "weight": "500",
+          "lineHeight": 1.1,
+          "tracking": "-0.021em",
+          "transform": "none",
+          "count": 17
+        },
+        "body": {
+          "family": "Manrope",
+          "sizes": [
+            18,
+            16,
+            14
+          ],
+          "weight": "500",
+          "lineHeight": 1.45,
+          "tracking": "0",
+          "transform": "none",
+          "count": 5
+        },
+        "ui": {
+          "family": "Helvetica Now Display",
+          "sizes": [
+            24,
+            16,
+            15,
+            14,
+            13
+          ],
+          "weight": "500",
+          "lineHeight": 1.8,
+          "tracking": "0.037em",
+          "transform": "none",
+          "count": 17
+        },
+        "loadedFaces": [
+          "Helvetica Now Display 400",
+          "Helvetica Now Display 700",
+          "Helvetica Now Display 500",
+          "Manrope 200 800"
+        ]
+      },
+      "color": {
+        "pageBackground": "rgb(255, 255, 255)",
+        "backgrounds": [
+          {
+            "color": "rgb(255, 255, 255)",
+            "share": 0.338
+          },
+          {
+            "color": "rgb(243, 246, 249)",
+            "share": 0.151
+          },
+          {
+            "color": "rgb(0, 0, 0)",
+            "share": 0.147
+          },
+          {
+            "color": "rgb(245, 240, 232)",
+            "share": 0.111
+          },
+          {
+            "color": "rgb(248, 248, 239)",
+            "share": 0.107
+          },
+          {
+            "color": "rgb(243, 142, 161)",
+            "share": 0.055
+          },
+          {
+            "color": "rgb(232, 120, 48)",
+            "share": 0.055
+          },
+          {
+            "color": "rgb(67, 82, 183)",
+            "share": 0.055
+          }
+        ],
+        "text": [
+          {
+            "color": "rgb(255, 255, 255)",
+            "count": 21
+          },
+          {
+            "color": "rgb(21, 21, 21)",
+            "count": 15
+          },
+          {
+            "color": "rgb(64, 64, 64)",
+            "count": 10
+          },
+          {
+            "color": "rgb(159, 159, 159)",
+            "count": 10
+          },
+          {
+            "color": "rgb(12, 14, 2)",
+            "count": 6
+          },
+          {
+            "color": "rgba(255, 255, 255, 0.45)",
+            "count": 4
+          }
+        ]
+      },
+      "spacing": {
+        "sectionPaddingY": [],
+        "sectionHeights": [
+          796,
+          48,
+          498,
+          2330,
+          1765,
+          852,
+          498,
+          423,
+          1247
+        ],
+        "gaps": [
+          [
+            "10px",
+            14
+          ],
+          [
+            "20px",
+            12
+          ],
+          [
+            "6px",
+            9
+          ],
+          [
+            "16px",
+            9
+          ],
+          [
+            "8px",
+            8
+          ],
+          [
+            "12px",
+            7
+          ]
+        ]
+      },
+      "layout": {
+        "viewport": 390,
+        "containerMaxWidths": [
+          [
+            "50px",
+            1
+          ],
+          [
+            "991px",
+            1
+          ],
+          [
+            "160px",
+            1
+          ],
+          [
+            "210px",
+            1
+          ]
+        ],
+        "gridCount": 17,
+        "flexCount": 183,
+        "gridTemplates": [
+          [
+            "1 cols",
+            11
+          ],
+          [
+            "4 cols",
+            2
+          ],
+          [
+            "2 cols",
+            2
+          ],
+          [
+            "3 cols",
+            1
+          ]
+        ]
+      },
+      "shape": {
+        "radii": [
+          [
+            "50%",
+            15
+          ],
+          [
+            "16px",
+            13
+          ],
+          [
+            "100px",
+            6
+          ],
+          [
+            "24px",
+            6
+          ],
+          [
+            "40px",
+            2
+          ]
+        ]
+      },
+      "motion": {
+        "stack": {
+          "gsap": true,
+          "scrollTrigger": true,
+          "lenis": false,
+          "locomotive": false,
+          "three": false,
+          "webgl": false,
+          "framer": false,
+          "webflow": false,
+          "barba": false,
+          "swiper": false,
+          "lottie": true
+        },
+        "canvases": 1,
+        "videos": 2,
+        "easings": [
+          [
+            "ease",
+            32
+          ],
+          [
+            "cubic-bezier(0.4, 0, 0.2, 1)",
+            16
+          ],
+          [
+            "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+            7
+          ],
+          [
+            "cubic-bezier(0.52, 0, 0.61, 0.99)",
+            1
+          ]
+        ],
+        "durations": [
+          [
+            "0.2s",
+            18
+          ],
+          [
+            "0.6s",
+            16
+          ],
+          [
+            "0.3s",
+            13
+          ],
+          [
+            "0.4s",
+            7
+          ]
+        ]
+      },
+      "counts": {
+        "images": 108,
+        "links": 83,
+        "buttons": 53,
+        "forms": 11
+      }
+    }
+  },
+  "ok": true
+}

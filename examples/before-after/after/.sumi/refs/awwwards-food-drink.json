@@ -1,0 +1,176 @@
+{
+  "listing": "https://www.awwwards.com/websites/food-drink/",
+  "fetchedAt": "2026-09-28T13:14:26.760Z",
+  "sites": [
+    {
+      "source": "awwwards",
+      "slug": "santioni-spirits",
+      "name": "Santioni Spirits",
+      "award": "Honorable Mention",
+      "score": null,
+      "url": "https://santionispirits.com/",
+      "awwwards": "https://www.awwwards.com/sites/santioni-spirits",
+      "tags": [
+        "art-illustration",
+        "food-drink",
+        "web-interactive",
+        "animation",
+        "typography",
+        "illustration",
+        "sound-audio",
+        "storytelling",
+        "interaction-design",
+        "webgl"
+      ]
+    },
+    {
+      "source": "awwwards",
+      "slug": "cozy-eating-village",
+      "name": "Cozy Eating Village",
+      "award": "Honorable Mention",
+      "score": null,
+      "url": "https://www.cozyeating.app/",
+      "awwwards": "https://www.awwwards.com/sites/cozy-eating-village",
+      "tags": [
+        "food-drink",
+        "games-entertainment",
+        "web-interactive",
+        "app-style",
+        "colorful",
+        "retro",
+        "gestures-interaction",
+        "interaction-design",
+        "html5",
+        "vercel",
+        "javascript"
+      ]
+    },
+    {
+      "source": "awwwards",
+      "slug": "monarque-evenements",
+      "name": "Monarque Événements",
+      "award": "Honorable Mention",
+      "score": null,
+      "url": "https://monarque-evenements.com/",
+      "awwwards": "https://www.awwwards.com/sites/monarque-evenements",
+      "tags": [
+        "business-corporate",
+        "events",
+        "food-drink",
+        "photographic",
+        "typography",
+        "transitions",
+        "gallery",
+        "microinteractions",
+        "animation",
+        "gsap",
+        "tailwind",
+        "wordpress"
+      ]
+    },
+    {
+      "source": "awwwards",
+      "slug": "zeroz-brand-site",
+      "name": "/zeroz Brand Site",
+      "award": "SOTD",
+      "score": 7.41,
+      "url": "https://otsuka-air.jp/",
+      "awwwards": "https://www.awwwards.com/sites/zeroz-brand-site",
+      "tags": [
+        "e-commerce",
+        "food-drink",
+        "technology",
+        "scrolling",
+        "typography",
+        "storytelling",
+        "3d",
+        "header-design",
+        "microinteractions",
+        "webgl",
+        "three-js",
+        "blender"
+      ]
+    },
+    {
+      "source": "awwwards",
+      "slug": "meatopia",
+      "name": "Meatopia",
+      "award": "Honorable Mention",
+      "score": null,
+      "url": "https://visitmeatopia.com/",
+      "awwwards": "https://www.awwwards.com/sites/meatopia",
+      "tags": [
+        "food-drink",
+        "promotional",
+        "web-interactive",
+        "3d",
+        "interaction-design",
+        "animation",
+        "colorful",
+        "three-js",
+        "figma",
+        "illustrator"
+      ]
+    },
+    {
+      "source": "awwwards",
+      "slug": "best-bean-best-cup",
+      "name": "Best Bean Best Cup",
+      "award": "Honorable Mention",
+      "score": null,
+      "url": "https://bestbeanbestcup.com.au",
+      "awwwards": "https://www.awwwards.com/sites/best-bean-best-cup",
+      "tags": [
+        "art-illustration",
+        "food-drink",
+        "web-interactive",
+        "animation",
+        "3d",
+        "ui-design",
+        "figma",
+        "blender",
+        "after-effects"
+      ]
+    },
+    {
+      "source": "awwwards",
+      "slug": "do-you-g",
+      "name": "DO YOU g?",
+      "award": "Honorable Mention",
+      "score": null,
+      "url": "https://gdrinkme.com/",
+      "awwwards": "https://www.awwwards.com/sites/do-you-g",
+      "tags": [
+        "business-corporate",
+        "food-drink",
+        "web-interactive",
+        "horizontal-layout",
+        "data-visualization",
+        "ui-design",
+        "animation",
+        "colorful",
+        "react",
+        "next-js",
+        "typescript"
+      ]
+    },
+    {
+      "source": "awwwards",
+      "slug": "partake-foods",
+      "name": "Partake Foods",
+      "award": "Honorable Mention",
+      "score": null,
+      "url": "https://partakefoods.com/",
+      "awwwards": "https://www.awwwards.com/sites/partake-foods",
+      "tags": [
+        "e-commerce",
+        "food-drink",
+        "colorful",
+        "navigation",
+        "animation",
+        "gsap",
+        "shopify"
+      ]
+    }
+  ]
+}

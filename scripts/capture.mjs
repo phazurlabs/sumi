@@ -84,17 +84,42 @@ function findChrome() {
   return hit;
 }
 
-const slugOf = (t) => t.slug || new URL(t.url).hostname.replace(/^www\./, '').replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+// Host plus path, so two pages on one host (localhost/before, localhost/after) never collide.
+const slugOf = (t) => t.slug || (() => {
+  const u = new URL(t.url);
+  return `${u.hostname.replace(/^www\./, '')}${u.port ? '-' + u.port : ''}${u.pathname}`
+    .replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '').toLowerCase();
+})();
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-// Consent banners hide half the hero on EU-built award sites. Click the obvious
-// accept button once; never anything else.
+// Consent banners and age gates (common on food & drink winners) hide the hero.
+// Click the obvious accept / "yes, I'm of age" button once; never anything else.
 async function dismissConsent(page) {
   await page.evaluate(() => {
-    const re = /^(accept( all)?|allow( all)?|agree|i agree|got it|ok(ay)?|continue|enter)$/i;
-    const btn = [...document.querySelectorAll('button, a[role="button"], [class*="cookie"] a')]
-      .find((b) => re.test((b.textContent || '').trim()));
-    btn?.click();
+    const re = /^(accept( all)?|allow( all)?|agree|i agree|got it|ok(ay)?|continue|enter( site)?|yes|i am (21|18)\+?|i'm (21|18)\+?|i am of (legal )?age)$/i;
+    // Gates are often a clickable <div>, not a <button>: match any leaf element with a pointer cursor.
+    const clickable = (e) => e.matches('button, a, [role="button"]') || getComputedStyle(e).cursor === 'pointer';
+    const gate = [...document.querySelectorAll('button, a, [role="button"], div, span')]
+      .find((e) => e.children.length <= 1 && re.test((e.textContent || '').trim()) && clickable(e));
+    gate?.click();
+
+    // Marketing popups ("15% off") and their scrims: fixed layers that cover the
+    // viewport and either collect an email, embed an iframe, or are an empty dim.
+    // A fixed <canvas> or a fixed layer holding real page content is left alone.
+    const vw = innerWidth, vh = innerHeight;
+    for (const el of document.querySelectorAll('body *')) {
+      const cs = getComputedStyle(el);
+      if (cs.position !== 'fixed' || cs.display === 'none' || el.tagName === 'CANVAS' || el.querySelector('canvas')) continue;
+      const r = el.getBoundingClientRect();
+      const cover = (Math.min(r.right, vw) - Math.max(r.left, 0)) * (Math.min(r.bottom, vh) - Math.max(r.top, 0)) / (vw * vh);
+      if (cover < 0.2) continue;
+      const email = el.querySelector('input[type="email"], input[name*="email" i]');
+      const frame = el.tagName === 'IFRAME' || (el.querySelector('iframe') && !el.querySelector('main, section, article'));
+      const scrim = !el.textContent.trim() && /rgba\(.+,\s*0?\.\d+\)/.test(cs.backgroundColor);
+      const dialog = el.matches('[role="dialog"], [aria-modal="true"]') || /popup|modal|klaviyo|privy|newsletter/i.test(el.className + '' + el.id);
+      if (email || frame || scrim || dialog) el.style.setProperty('display', 'none', 'important');
+    }
+    document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
   }).catch(() => {});
 }
 
@@ -286,6 +311,8 @@ for (const t of targets) {
       for (let i = 0; i < n; i++) {
         const frac = n === 1 ? 0 : i / (n - 1);
         if (i > 0) await wheelTo(page, frac);
+        // Gates can appear late, after a preloader finishes: check before every shot.
+        await dismissConsent(page);
         const file = `${name}-${i}.jpg`;
         await page.screenshot({ path: join(dir, file), type: 'jpeg', quality: 72 });
         record.shots.push(file);

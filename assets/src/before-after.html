@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- README before/after card. Rendered to assets/before-after.png by render.mjs.
+     Every number here comes from examples/before-after/GRADE.md. -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  :root { --wall: #151412; --ink: #F1ECE4; --muted: #8C857B; --coral: #E8715A; --line: rgba(241,236,228,.14); }
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 1600px; background: var(--wall); color: var(--ink); font: 500 15px/1.4 'JetBrains Mono', monospace; }
+  body { padding: 88px 72px 56px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .shot { position: relative; }
+  .shot img { width: 100%; display: block; border: 1px solid var(--line); }
+  .tag { position: absolute; top: -50px; left: -8px; font: 400 44px/1 'Permanent Marker', cursive; transform: rotate(-4deg); z-index: 2; text-shadow: 0 2px 0 var(--wall); }
+  .before .tag { color: var(--muted); }
+  .after .tag { color: var(--coral); }
+  .dqs { position: absolute; right: 16px; bottom: 16px; background: var(--wall); border: 2px solid currentColor; padding: 10px 14px 8px; text-align: right; }
+  .before .dqs { color: var(--muted); } .after .dqs { color: var(--coral); }
+  .dqs b { display: block; font: 400 52px/1 'Anton', sans-serif; }
+  .caption { margin-top: 14px; color: var(--muted); }
+  table { width: 100%; border-collapse: collapse; margin-top: 44px; }
+  th, td { text-align: left; padding: 13px 0; border-top: 1px solid var(--line); font-weight: 500; }
+  th { color: var(--muted); width: 34%; }
+  td.b { color: var(--muted); width: 33%; }
+  td.a { color: var(--ink); }
+  td.a em { color: var(--coral); font-style: normal; }
+  .foot { display: flex; justify-content: space-between; margin-top: 28px; color: var(--muted); font-size: 13px; }
+  .foot b { color: var(--coral); font-weight: 500; }
+</style>
+</head>
+<body>
+  <div class="cols">
+    <div class="shot before"><span class="tag">before</span><img src="ba-before.jpg" alt="" /><div class="dqs">DQS<b>43</b></div>
+      <p class="caption">A coding agent, no design system. Every value a default.</p></div>
+    <div class="shot after"><span class="tag">after sumi</span><img src="ba-after.jpg" alt="" /><div class="dqs">DQS<b>82</b></div>
+      <p class="caption">Same brief. 4 Awwwards food &amp; drink winners on the wall first.</p></div>
+  </div>
+  <table>
+    <tr><th>Font weights loaded</th><td class="b">5 (Inter 400–800)</td><td class="a"><em>2</em> (Fraunces 900 · Hanken 400)</td></tr>
+    <tr><th>Display ÷ body size</th><td class="b">2.8×</td><td class="a"><em>7.9×</em></td></tr>
+    <tr><th>Easing curves</th><td class="b">4</td><td class="a"><em>1</em> (sampled from a 7.41 SOTD)</td></tr>
+    <tr><th>Page / text</th><td class="b">#FFFFFF / #000000</td><td class="a">#F3ECE1 / #1C1612</td></tr>
+    <tr><th>Actions in first viewport</th><td class="b">3</td><td class="a"><em>1</em></td></tr>
+    <tr><th>At 390px wide</th><td class="b">overflows sideways</td><td class="a">one clean column</td></tr>
+  </table>
+  <div class="foot"><span>measured with <b>scripts/capture.mjs</b> · a11y by axe-core · graded against the <b>/sumi:grade</b> rubric</span><span>reproduce: examples/before-after/</span></div>
+</body>
+</html>
