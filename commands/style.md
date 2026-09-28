@@ -109,7 +109,7 @@ Each recipe defines the complete set of design decisions: color palette, typogra
 - **Mood**: Bold, editorial, gallery-like
 - **Radius**: sm=0px, md=0px, lg=0px (sharp edges, editorial feel) OR all round (playful)
 - **Shadows**: None or dramatic — no middle ground
-- **Reference DNA**: Awwwards winners, Linear website, Vercel website
+- **Reference DNA**: current Awwwards winners via `/inspo`, Linear website, Vercel website
 
 ### Recipe 6: Education / EdTech
 **Trigger**: `/style education` or `/style edtech` or `/style learning`
@@ -534,6 +534,8 @@ For dark mode: replace shadow with border-based elevation or subtle white overla
 
 Identify **5 best-in-class apps** in the sector with actionable design intelligence.
 
+**If `.sumi/refs/board.json` exists** (from `/inspo`), the rows come from its sourced references and their captured DNA. The board's `direction` seeds Steps 1-8, and each reference maps into `references` in `.sumi/style.json`. **If not**, offer `/inspo` first. If you continue without it, label this table "from memory, not sourced."
+
 | # | App | Platform | Steal This | Key Takeaway | Where They Could Improve |
 |---|-----|----------|------------|--------------|-------------------------|
 | 1 | [Name] | [iOS/Android/Web] | [Specific pattern] | [One sentence] | [One honest critique] |
@@ -542,7 +544,8 @@ Identify **5 best-in-class apps** in the sector with actionable design intellige
 | 4 | [Name] | [iOS/Android/Web] | [Specific pattern] | [One sentence] | [One honest critique] |
 | 5 | [Name] | [iOS/Android/Web] | [Specific pattern] | [One sentence] | [One honest critique] |
 
-**Inspiration Sources:**
+**Inspiration Sources** (`/inspo` pulls the first two live):
+- **Awwwards**: sector tag + style tag (`reference-intelligence/references/awwwards-adapter.md`)
 - **Mobbin**: Specific search terms and filter combinations
 - **Screenlane**: Relevant flow categories
 - **Refero**: Search terms and collections

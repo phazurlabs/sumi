@@ -200,3 +200,21 @@
   cluster: anchors
   why: "Architecture question, not a preset request. Splits the two token skills
         on build-your-own versus start-from-vetted."
+
+# ---- cluster: references (reference-intelligence <-> visual-design-mastery / screen-flow-patterns)
+- id: awwwards-references
+  prompt: "find me award-winning Awwwards sites to use as references for a fintech landing page"
+  expect: reference-intelligence
+  forbid: [conversion-optimization-patterns]
+  cluster: references
+  why: "Sourcing real sites is a fetch, not recall. visual-design-mastery also
+        says Awwwards and would answer from memory, which is the exact failure
+        /inspo exists to remove."
+
+- id: mobbin-flow-inspo
+  prompt: "pull Mobbin examples of onboarding flows for inspiration"
+  expect: reference-intelligence
+  also_ok: [screen-flow-patterns]
+  cluster: references
+  why: "screen-flow-patterns calls itself Mobbin-style but can only describe
+        patterns. Asking for Mobbin examples means sourced screens."

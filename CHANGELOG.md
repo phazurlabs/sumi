@@ -3,6 +3,53 @@
 All notable changes to this project are documented here. This project follows
 [Semantic Versioning](https://semver.org).
 
+## [4.2.0] — 2026-09-28
+
+The reference release. Every Sumi skill encoded taste from memory. `/grade` said
+"Awwwards-calibrated" but had never looked at an Awwwards site. This release makes
+Sumi **look** first: it sources real, current, award-winning work, measures it, and
+holds your build up against it.
+
+### Added
+
+- **`/inspo`**, which comes back from the retired list as live reference sourcing:
+  - **Awwwards** through `scripts/awwwards.mjs`, which returns the jury score, tags and
+    live URL from public listings. It fetches on demand, is capped at 24 sites, and runs
+    with a polite delay. `--awarded` filters out nominees on tag pages, which have no
+    server-side award filter.
+  - **Mobbin** screens and flows through its official MCP.
+  - **MotionSites** motion recipes through its MCP.
+- **`scripts/capture.mjs`**, one puppeteer-core run over the kept sites.
+  - It takes desktop and phone screenshots at scroll steps. The scrolling uses real
+    wheel input, because Lenis and Locomotive ignore `scrollTo`, which otherwise
+    produces N copies of the hero.
+  - It measures design DNA from computed style: type scale, tracking, leading, palette
+    by painted area, section rhythm, grid, radius, house easing and motion stack.
+  - puppeteer-core is resolved from the project, not added as a dependency.
+- **`skills/reference-intelligence`** (skill #45) holds the source routing, the three
+  adapters, the DNA schema, board synthesis (one trait per reference, the anti-clone
+  rule) and the comparison protocol.
+- **`agents/`**, a design team of four:
+  - `scout` sources references.
+  - `art-director` turns the board into direction.
+  - `ux-architect` designs flows from real Mobbin patterns.
+  - `critic` grades the build side by side with the board.
+- **`.sumi/refs/`**, added to the design-memory contract, holding `board.json`.
+  - `/inspo` owns this folder. `/style` stays the only writer of `style.json`, and it
+    reads the board.
+- **Routing fixtures** for reference requests. The routing score went from 20/22 to 22/24.
+
+### Changed
+
+- `/style` Step 9 draws its reference table from the board. Without a board it labels
+  the table "from memory, not sourced".
+- `/page`, `/screen` and `/component` build against the board when one exists.
+- `/grade` and `/roast` report `Build | Best ref | Δ` against the board and give a
+  verdict: clears the wall, below the wall, or clone risk.
+- The orchestrator routes `reference-intelligence` in the Create and Compose pipelines.
+- The baseline was raised on purpose for `sumi.md` and `design-memory`, the two files
+  that grew more than 2% while documenting the above.
+
 ## [4.1.0] — 2026-08-08
 
 Progressive disclosure release. v4.0.0 merged two lineages into one plugin; this

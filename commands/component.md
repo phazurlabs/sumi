@@ -47,7 +47,7 @@ Generate a production-ready, RUNNABLE UI component with complete state coverage,
 - Cognitive context: focused (focused, browsing, stressed, relaxed)
 
 **Auto-resolve:**
-- Prior Sumi outputs: Check `/style`, `/style`, `/benchmark`. Consume if available; note what is missing
+- Prior Sumi outputs: Check `/style` (`.sumi/style.json`), `/inspo` (`.sumi/refs/board.json`), `/benchmark`. Consume if available; note what is missing
 - Sector conventions: Apply `sector-style-intelligence` if sector specified
 
 ---

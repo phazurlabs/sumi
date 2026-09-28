@@ -30,6 +30,7 @@ Score any UI's visual design quality across 10 weighted dimensions, calibrated t
 3. **Sector**: Auto-detect from content/code, or ask. Sector determines what "good" looks like — fintech and a children's game have different benchmarks
 4. **Platform**: Web, iOS, Android, or cross-platform
 5. **Prior Sumi outputs**: Consume `/style`, `/tokens`, `/palette`, `/type` if available. Score against the intended direction
+6. **Reference Board**: If `.sumi/refs/board.json` exists, grade side by side with the references per `reference-intelligence/references/comparison-protocol.md`: report `Build | Best ref | Δ` and a verdict (clears the wall / below the wall / clone risk). No board → say the grade is uncalibrated
 
 ### Step 1: Visual Inventory
 
