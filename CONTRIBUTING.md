@@ -13,14 +13,14 @@ Corporate CLA instead. Email **legal@phazurlabs.com** to arrange this.
 
 ### Why a CLA and not just a DCO
 
-This project is licensed under Apache-2.0. Under Apache-2.0, Phazur Labs LLC owns its own
+This project is licensed under Apache-2.0. Under Apache-2.0, Phazur Labs owns its own
 code but would hold only an *Apache license* to yours. That is not enough to offer this
 software under any other terms later — no dual licensing, no commercial edition, no
 change of license — without tracking down and getting consent from every past
 contributor. That constraint is what made the Redis, HashiCorp, and Elastic relicensings
 as painful as they were.
 
-The CLA solves this by granting Phazur Labs LLC the right to relicense. **You keep full
+The CLA solves this by granting Phazur Labs the right to relicense. **You keep full
 ownership and copyright of your contribution** — the CLA is a license grant to us, not an
 assignment away from you. You can continue to use, sell, and relicense your own code
 however you like.
@@ -66,7 +66,7 @@ This appends a `Signed-off-by:` trailer asserting the
   // SPDX-License-Identifier: Apache-2.0
   ```
 - **Do not add or alter LICENSE, NOTICE, or TRADEMARKS.md** in a pull request. Those are
-  maintained by Phazur Labs LLC.
+  maintained by Phazur Labs.
 
 ## Process
 

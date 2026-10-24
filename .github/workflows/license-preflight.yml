@@ -31,7 +31,7 @@ jobs:
         run: |
           head -3 LICENSE | grep -q "Apache License" \
             || { echo "FAIL LICENSE is not Apache-2.0"; exit 1; }
-          grep -q "Copyright 2026 Phazur Labs LLC" LICENSE \
+          grep -q "Copyright 2026 Phazur Labs" LICENSE \
             || { echo "FAIL copyright line missing or altered"; exit 1; }
           # The licensed body must stay verbatim or GitHub's licensee gem stops
           # detecting it and downstream compliance scanners miss it. The only
@@ -40,7 +40,7 @@ jobs:
           #   -B/-w: apache.org ships a leading blank line and a different trailing
           #   newline than the canonical text, and neither is a real modification.
           curl -fsSL https://www.apache.org/licenses/LICENSE-2.0.txt \
-            | sed 's/Copyright \[yyyy\] \[name of copyright owner\]/Copyright 2026 Phazur Labs LLC/' \
+            | sed 's/Copyright \[yyyy\] \[name of copyright owner\]/Copyright 2026 Phazur Labs/' \
             > /tmp/expected.txt
           if ! diff -qBw /tmp/expected.txt LICENSE >/dev/null; then
             echo "FAIL Apache body was modified — breaks license detection"

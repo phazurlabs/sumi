@@ -1,9 +1,9 @@
-# Phazur Labs LLC — Individual Contributor License Agreement
+# Phazur Labs — Individual Contributor License Agreement
 
 **Version 1.0**
 
 Thank you for your interest in contributing to software projects managed by Phazur Labs
-LLC ("Phazur Labs," "we," or "us"). This agreement documents the rights granted by
+("Phazur Labs," "we," or "us"). This agreement documents the rights granted by
 contributors to us.
 
 **You retain ownership of your Contribution.** This is a license grant, not an
