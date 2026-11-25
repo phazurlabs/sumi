@@ -3,6 +3,39 @@
 All notable changes to this project are documented here. This project follows
 [Semantic Versioning](https://semver.org).
 
+## [4.3.0] — 2026-11-24
+
+Capture runs in the real browser. No Puppeteer, no Playwright, nothing to install.
+
+### Changed
+
+- **Capture moved to Claude in Chrome.** `scripts/capture-page.js` holds the
+  in-page measurement and the consent-gate handling, unchanged from 4.2.0. Claude
+  in Chrome runs it inside each live site, so every site is still measured by the
+  same script. `scripts/capture.mjs` saves the result as `dna.json` and, on macOS,
+  saves the scroll-step screenshots with the built-in `screencapture`. It has
+  no dependencies. The `dna.json` shape is the same, plus `capturedWith`.
+- **`reference-intelligence/references/capture-protocol.md`** (new) sets out the
+  steps for each site. `/inspo`, `scout`, `critic` and the comparison protocol
+  follow it.
+- **`scout` and `critic`** no longer limit their tools, so they can use Claude in
+  Chrome.
+- **Script paths** resolve from `${CLAUDE_PLUGIN_ROOT}` alone. The old `find`
+  fallback could pick an older cached version.
+- **`assets/src/render.mjs`** renders the README art with Chrome's own headless
+  screenshot instead of puppeteer-core.
+
+### Removed
+
+- puppeteer-core lookup, `SUMI_PUPPETEER_DIR` and `SUMI_CHROME` for capture.
+
+### Known limits
+
+- Chrome may not size a window below about 500 px wide, so "phone" DNA can be
+  measured wider than 390. `layout.viewport` holds the real width.
+- Screenshots are saved on macOS only. Elsewhere they are viewed in the browser,
+  not saved.
+
 ## [4.2.0] — 2026-09-28
 
 The reference release. Every Sumi skill encoded taste from memory. `/grade` said

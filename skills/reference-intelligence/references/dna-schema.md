@@ -1,4 +1,4 @@
-# Reference DNA — what `capture.mjs` measures
+# Reference DNA — what `capture-page.js` measures
 
 Every value is **computed style from the live, rendered DOM** after the page has been scrolled
 through once, so scroll-reveals have fired. It describes what the site actually paints, not
@@ -65,5 +65,6 @@ what its CSS declares. `dna.json` holds one block per viewport (`desktop` 1440×
 
 - Library detection is best-effort. ES-module bundles leave no globals, so read the screenshots.
 - Canvas/WebGL content is invisible to the DOM metrics. Screenshots are the only evidence.
-- Sites behind a preloader longer than ~3s may capture the loader. Re-run that single URL.
+- Sites behind a preloader longer than ~3s may capture the loader. Redo that single site.
+- Chrome may not size a window below about 500 px, so "phone" DNA can be measured wider than 390. `layout.viewport` holds the real width.
 - The captures are one moment in time. Hover, cursor and sound design aren't measured.

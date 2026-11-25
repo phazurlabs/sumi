@@ -146,9 +146,9 @@ For every reference it captures, Sumi records what the site actually paints, not
 | **Grid and shape** | Column count, container width, corner radius. 0px reads editorial; pill buttons read friendly |
 | **Motion stack** | The house easing, the tempo, and the libraries (GSAP, Lenis, Three.js, WebGL, Framer, Webflow) |
 
-Screenshots scroll with real wheel input, because smooth-scroll sites ignore scripted scrolling. The capture also clicks past age gates, closes discount popups, and tells you when a site renders in canvas, where the DOM can't be measured.
+Screenshots scroll with real wheel input in Claude in Chrome, because smooth-scroll sites ignore scripted scrolling. The capture also clicks past age gates, closes discount popups, and tells you when a site renders in canvas, where the DOM can't be measured.
 
-**What you need:** a local Chrome and `puppeteer-core` in your project (`npm i -D puppeteer-core`). Mobbin also needs a Mobbin account and its MCP: `claude mcp add --transport http mobbin https://api.mobbin.com/mcp`.
+**What you need:** Claude in Chrome connected, and a Mac for saved screenshots (Sumi uses the built-in `screencapture`; elsewhere the shots are viewed, not saved). No Puppeteer, no Playwright, nothing to install. Mobbin also needs a Mobbin account and its MCP: `claude mcp add --transport http mobbin https://api.mobbin.com/mcp`.
 
 ---
 
@@ -278,7 +278,7 @@ Sumi is big, but it loads in three layers:
 
 Ask about button sizing and you load the cognitive psychology skill, not the other 44. Since v4.1.0, a `/style` → `/screen` → `/fix` session costs 70,000 tokens instead of 133,000.
 
-The looking is done by code, and the judging by writing. `scripts/awwwards.mjs` reads public Awwwards listings on demand: a small, capped number of sites per run, with pauses between requests. `scripts/capture.mjs` makes one headless Chrome pass over the kept sites. The crew's rules live in `reference-intelligence`.
+The looking is done by code, and the judging by writing. `scripts/awwwards.mjs` reads public Awwwards listings on demand: a small, capped number of sites per run, with pauses between requests. `scripts/capture-page.js` measures each kept site inside the real browser through Claude in Chrome, the same script for every site, and `scripts/capture.mjs` saves the DNA and screenshots. The crew's rules live in `reference-intelligence`.
 
 Broad requests go to `sumi-orchestrator`, which picks one of twelve pipelines, including Evaluate, Fix, Create, Compose, Systematize and Measure, and runs each stage behind a gate. You find out at stage three, not at the end.
 
@@ -304,7 +304,7 @@ A green build proves the plumbing. It can't prove the taste. That part is on the
 
 ## Install, properly
 
-**You need** the [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code), authenticated. The core is markdown: zero config, and it works offline. `/inspo` capture adds a local Chrome and `puppeteer-core`.
+**You need** the [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code), authenticated. The core is markdown: zero config, and it works offline. `/inspo` capture adds Claude in Chrome, plus macOS for saved screenshots.
 
 ```
 /plugin marketplace add phazurlabs/sumi
@@ -319,8 +319,9 @@ Pick the scope when you install: user (all your projects), project (shared throu
 |---|---|
 | Commands don't appear | Restart Claude Code after installing |
 | `/plugin` not recognised | Update Claude Code |
-| `/inspo` can't find puppeteer-core | `npm i -D puppeteer-core`, or set `SUMI_PUPPETEER_DIR` |
-| `/inspo` can't find Chrome | Install Chrome, or set `SUMI_CHROME` |
+| `/inspo` can't reach the browser | Connect Claude in Chrome |
+| `/inspo` saves no screenshots | macOS: give Terminal Screen Recording permission. Other systems: shots are viewed, not saved |
+| Your browser isn't Google Chrome | Set `SUMI_BROWSER_APP` to its app name |
 | No Mobbin results | `/mcp` → `mobbin` → authenticate |
 | Stuck on an old version | `/plugin update sumi` (`version` in `plugin.json` is the cache key) |
 | Uninstall | `/plugin uninstall sumi` |
@@ -335,8 +336,8 @@ sumi/
 ├── skills/                    45 skills, auto-invoked
 │   └── <skill>/
 │       ├── SKILL.md           loads in full when the skill fires
-│       └── references/        195 reference files, loaded only when pointed at
-├── scripts/                   awwwards.mjs, capture.mjs, validate-plugin.py, check-corpus.py, extract-claims.py
+│       └── references/        196 reference files, loaded only when pointed at
+├── scripts/                   awwwards.mjs, capture-page.js, capture.mjs, validate-plugin.py, check-corpus.py, extract-claims.py
 ├── examples/before-after/     the receipts: before, after, board, grade sheet
 ├── assets/                    art, plus the HTML it's rendered from (assets/src)
 ├── tests/                     ratchet baselines, routing fixtures

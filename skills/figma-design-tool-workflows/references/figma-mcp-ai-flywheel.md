@@ -644,7 +644,7 @@ For the flywheel, the baseline is a rendered screenshot from Figma (exported via
 
 ### Accessibility Automated Checks
 
-- **axe-core** integration via `jest-axe` or `@axe-core/playwright` catches WCAG 2.1 AA violations in generated markup.
+- **axe-core** integration via `jest-axe` or `cypress-axe` catches WCAG 2.1 AA violations in generated markup.
 - **Storybook a11y addon** runs axe checks on every story during development.
 - **Lighthouse CI** provides accessibility scores as part of the CI pipeline.
 

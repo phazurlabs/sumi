@@ -855,7 +855,7 @@ Run visual regression tests when token values change to catch unintended visual 
 
 1. Build a reference Storybook or component preview page using the current production tokens.
 2. Build the same page with the proposed token changes.
-3. Compare screenshots using a tool such as Chromatic, Percy, BackstopJS, or Playwright's visual comparison.
+3. Compare screenshots using a tool such as Chromatic or Percy.
 4. Flag any visual differences for human review before merging.
 
 This is especially critical for changes to Tier 1 (primitive) tokens, which cascade through the entire system.
