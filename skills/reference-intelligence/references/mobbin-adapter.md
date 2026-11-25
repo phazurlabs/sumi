@@ -59,7 +59,7 @@ board.
 Mobbin screenshots are Mobbin's licensed content. **Study them in-session and record links plus
 notes. Don't copy Mobbin images into `.sumi/refs/` or into the project.** DNA for app UI comes
 from your analysis of the screens (layout, hierarchy, step count, element choices), not from
-`capture.mjs`. If a pick also has a public marketing site, capture that site directly.
+the capture protocol. If a pick also has a public marketing site, capture that site directly.
 
 ## When Mobbin is unavailable
 

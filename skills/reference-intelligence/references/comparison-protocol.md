@@ -6,12 +6,9 @@ turns `/grade`, `/roast` and the `critic` agent into a side-by-side comparison w
 
 ## 1. Capture the build the same way
 
-Serve the build (dev server, `npx serve dist`, or the preview URL) and run the SAME script, so
-the numbers are comparable:
-
-```bash
-node "$SUMI/scripts/capture.mjs" http://localhost:4321 --out .sumi/refs/_build
-```
+Serve the build (dev server, `npx serve dist`, or the preview URL) and capture it with the SAME
+protocol and script, so the numbers are comparable: `capture-protocol.md`, in Claude in Chrome,
+with `--out .sumi/refs/_build`.
 
 The build lands in `.sumi/refs/_build/<host>/` with the same DNA shape and the same scroll steps.
 

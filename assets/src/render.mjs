@@ -1,48 +1,44 @@
 #!/usr/bin/env node
-// Renders the README art in assets/src/*.html to PNG with the same puppeteer-core
-// and Chrome resolution as scripts/capture.mjs. Run from the repo root:
+// Renders the README art in assets/src/*.html to PNG with Chrome's own headless screenshot, at 2x.
+// No Puppeteer, no Playwright, no dependencies. Run from the repo root:
 //   node assets/src/render.mjs
 // Outputs: assets/hero-dark.png, assets/hero-light.png, assets/before-after.png
 // The README ships the heroes as JPEG (sips -s format jpeg -s formatOptions 82) to keep them light.
+// Set SUMI_CHROME to the Chrome binary if it is not in a usual place.
 
-import { createRequire } from 'node:module';
-import { existsSync } from 'node:fs';
-import { homedir } from 'node:os';
+import { execFileSync } from 'node:child_process';
+import { existsSync, mkdtempSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const root = resolve(new URL('../..', import.meta.url).pathname);
-
-async function loadPuppeteer() {
-  for (const dir of [process.env.SUMI_PUPPETEER_DIR, process.cwd(), join(homedir(), 'motionsmith/cli'), join(homedir(), 'vectorpax-landing')].filter(Boolean)) {
-    try {
-      return (await import(pathToFileURL(createRequire(join(dir, 'package.json')).resolve('puppeteer-core')).href)).default;
-    } catch {}
-  }
-  throw new Error('puppeteer-core not found; set SUMI_PUPPETEER_DIR');
+const chrome = [process.env.SUMI_CHROME, '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/usr/bin/google-chrome', '/usr/bin/google-chrome-stable', '/usr/bin/chromium']
+  .find((p) => p && existsSync(p));
+if (!chrome) {
+  console.error('No Chrome found. Install Google Chrome or set SUMI_CHROME.');
+  process.exit(2);
 }
 
-const chrome = [process.env.SUMI_CHROME, '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', '/usr/bin/google-chrome']
-  .find((p) => p && existsSync(p));
-
+// Heights are fixed: Chrome's command-line screenshot does not measure the page. before-after.html is 1000 tall.
 const jobs = [
   { src: 'assets/src/hero.html?theme=dark', out: 'assets/hero-dark.png', w: 1600, h: 640 },
   { src: 'assets/src/hero.html?theme=light', out: 'assets/hero-light.png', w: 1600, h: 640 },
-  { src: 'assets/src/before-after.html', out: 'assets/before-after.png', w: 1600, h: 0 },
+  { src: 'assets/src/before-after.html', out: 'assets/before-after.png', w: 1600, h: 1000 },
 ].filter((j) => existsSync(join(root, j.src.split('?')[0])));
 
-const puppeteer = await loadPuppeteer();
-const browser = await puppeteer.launch({ executablePath: chrome, headless: true, args: ['--allow-file-access-from-files'] });
-for (const j of jobs) {
-  const page = await browser.newPage();
-  await page.setViewport({ width: j.w, height: j.h || 900, deviceScaleFactor: 2 });
-  const [file, query] = j.src.split('?');
-  await page.goto(pathToFileURL(join(root, file)).href + (query ? `?${query}` : ''), { waitUntil: 'networkidle0' });
-  await page.evaluate(() => document.fonts.ready);
-  const clip = j.h ? { x: 0, y: 0, width: j.w, height: j.h }
-    : await page.evaluate(() => ({ x: 0, y: 0, width: innerWidth, height: document.documentElement.scrollHeight }));
-  await page.screenshot({ path: join(root, j.out), clip });
-  console.log(`✓ ${j.out}`);
-  await page.close();
+const profile = mkdtempSync(join(tmpdir(), 'sumi-render-'));
+try {
+  for (const j of jobs) {
+    const [file, query] = j.src.split('?');
+    const url = pathToFileURL(join(root, file)).href + (query ? `?${query}` : '');
+    execFileSync(chrome, [
+      '--headless=new', '--disable-gpu', '--hide-scrollbars', '--allow-file-access-from-files', `--user-data-dir=${profile}`,
+      '--force-device-scale-factor=2', `--window-size=${j.w},${j.h}`, '--virtual-time-budget=4000', `--screenshot=${join(root, j.out)}`, url,
+    ], { stdio: 'ignore' });
+    if (!existsSync(join(root, j.out))) throw new Error(`Chrome wrote no image for ${j.src}`);
+    console.log(`✓ ${j.out}`);
+  }
+} finally {
+  rmSync(profile, { recursive: true, force: true });
 }
-await browser.close();

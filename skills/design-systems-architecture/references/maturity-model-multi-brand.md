@@ -44,7 +44,7 @@ Design systems evolve through predictable stages of sophistication. Organization
 
 **Team size.** Three to six people, dedicated full-time. Roles include design system designer, frontend engineers, documentation lead, and possibly a part-time program manager.
 
-**Tooling.** Design tokens managed in a structured format (JSON, YAML, or W3C DTCG). Style Dictionary or Tokens Studio for token transformation. Figma variables synced with code tokens. Automated visual regression testing (Chromatic, Percy, Playwright screenshots). Automated accessibility testing in CI (axe-core, Storybook a11y addon).
+**Tooling.** Design tokens managed in a structured format (JSON, YAML, or W3C DTCG). Style Dictionary or Tokens Studio for token transformation. Figma variables synced with code tokens. Automated visual regression testing (Chromatic, Percy). Automated accessibility testing in CI (axe-core, Storybook a11y addon).
 
 **Governance.** Written contribution guidelines. A request-for-component process with templates. Semantic versioning enforced on the package. A deprecation policy with migration guides.
 

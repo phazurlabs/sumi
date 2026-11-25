@@ -15,7 +15,7 @@ onboarding iOS"), URLs to study ("like linear.app and stripe.com"), or nothing (
 
 Resolve the plugin scripts once:
 ```bash
-SUMI="${CLAUDE_PLUGIN_ROOT:-$(dirname "$(dirname "$(find ~/.claude/plugins -path '*sumi*/scripts/capture.mjs' -print -quit)")")}"
+SUMI="${CLAUDE_PLUGIN_ROOT}"
 ```
 
 ---
@@ -62,12 +62,12 @@ different strengths, not five versions of the same site.
 
 ## Step 4 — Capture
 
-Capture all kept web references in one call, in the background if there are more than 3:
-```bash
-node "$SUMI/scripts/capture.mjs" --from .sumi/refs/awwwards-<tag>.json --pick a,b,c [extra URLs…]
-```
-While it runs, analyse the Mobbin picks. Then **look at the screenshots** for each reference:
-desktop-0, its most distinctive step, and phone-0. Re-run any single URL whose capture shows
+Capture each kept web reference in Claude in Chrome, following
+`reference-intelligence/references/capture-protocol.md`: open it, run the measuring script,
+take the scroll-step shots, save the DNA. Pass `--from .sumi/refs/awwwards-<tag>.json` so the
+award and score travel with it. Never Puppeteer, never Playwright.
+Then analyse the Mobbin picks, and **look at the screenshots** for each reference:
+desktop-0, its most distinctive step, and phone-0. Redo any single site whose capture shows
 a preloader or a consent wall.
 
 ## Step 5 — Board
@@ -95,7 +95,7 @@ The output MUST include:
 The output MUST NOT include:
 - A site presented as an Awwwards winner, or a screen presented as a Mobbin result, from memory
 - Two or more traits taken from the same reference
-- Step-by-step browser MCP navigation to study a site. Capture is one script call
+- A site studied by poking at its DOM step by step. Measuring is one script, run in the page
 - Captured third-party screenshots published, deployed or committed
 
 ---

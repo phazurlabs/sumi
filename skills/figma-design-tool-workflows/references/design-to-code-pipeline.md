@@ -657,7 +657,7 @@ Percy is stronger when you need full-page snapshots or when components are not i
 
 ### BackstopJS (Open Source)
 
-BackstopJS is a self-hosted alternative using headless Chrome and Docker for consistent reference images.
+BackstopJS is a self-hosted alternative using headless Chrome and Docker for consistent reference images. Its engines are Puppeteer and Playwright, so Sumi itself never runs it; use it only if your team already does.
 
 ```json
 {

@@ -1,3 +1,6 @@
 # Captures of third-party sites are study material, never shipped (see reference-intelligence).
 .sumi/refs/**/*.jpg
 examples/**/.sumi/refs/**/*.jpg
+
+# Python bytecode from the check scripts.
+__pycache__/

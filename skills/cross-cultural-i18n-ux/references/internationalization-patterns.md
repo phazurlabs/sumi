@@ -752,26 +752,11 @@ The brackets make it immediately visible which strings are localized (bracketed)
 
 ### Visual Regression Testing for RTL
 
-Integrate RTL visual regression tests into the CI pipeline. Tools like Playwright, Cypress, or Percy can capture screenshots of every page in both LTR and RTL modes and flag visual differences that exceed a threshold. The test configuration is straightforward:
+Integrate RTL visual regression tests into the CI pipeline. Services like Percy or Chromatic capture every page or story in both LTR and RTL and flag differences above a threshold. The setup:
 
-```javascript
-// Playwright example: RTL visual regression
-test.describe('RTL Layout', () => {
-  test.beforeEach(async ({ page }) => {
-    await page.evaluate(() => {
-      document.documentElement.setAttribute('dir', 'rtl');
-      document.documentElement.setAttribute('lang', 'ar');
-    });
-  });
-
-  test('dashboard layout mirrors correctly', async ({ page }) => {
-    await page.goto('/dashboard');
-    await expect(page).toHaveScreenshot('dashboard-rtl.png', {
-      maxDiffPixelRatio: 0.01,
-    });
-  });
-});
-```
+1. Render each page or story twice: once as-is, once with `dir="rtl"` and `lang="ar"` on the root element.
+2. Snapshot both, and keep the RTL snapshot as its own baseline.
+3. Fail the check when the difference exceeds a small ratio (about 1% of pixels), and send it for human review.
 
 ### Linting for i18n Compliance
 

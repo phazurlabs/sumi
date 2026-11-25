@@ -15,7 +15,7 @@ That loop has four steps and Sumi owns all of them:
 | Step | What happens | Where it lives |
 |------|--------------|----------------|
 | **Scout** | Find 8-12 candidates from real sources | `scripts/awwwards.mjs`, Mobbin MCP, MotionSites MCP |
-| **Capture** | Screenshot the LIVE sites and measure their DNA | `scripts/capture.mjs` → `.sumi/refs/<slug>/` |
+| **Capture** | Screenshot the LIVE sites and measure their DNA, in Claude in Chrome | `capture-protocol.md`, `scripts/capture-page.js`, `scripts/capture.mjs` → `.sumi/refs/<slug>/` |
 | **Board** | Synthesize what to steal / avoid into one direction | `.sumi/refs/board.md` + `board.json` |
 | **Compare** | Grade a build side by side with the board | `critic` agent, `/grade`, `/roast` |
 
@@ -27,13 +27,14 @@ That loop has four steps and Sumi owns all of them:
 | App screen, dashboard, settings, product UI | **Mobbin** | Awwwards `app-style` / `ui-design` tags |
 | A flow (onboarding, checkout, signup, paywall, search) | **Mobbin** (flows) | — |
 | Motion, scroll storytelling, WebGL, transitions | **Awwwards** (`gsap`, `three-js`, `webgl`, `transitions`, `scrolling`) | **MotionSites** |
-| "Make it look like <url>" | That URL, straight into `capture.mjs` | Awwwards category of that site |
+| "Make it look like <url>" | That URL, captured straight away | Awwwards category of that site |
 
 Adapters, one per source:
 - `references/awwwards-adapter.md` — listings, the 192 category tags, sector → tag map, etiquette
 - `references/mobbin-adapter.md` — MCP auth, query shapes, what may be stored
 - `references/motionsites-adapter.md` — prompt library, free-tier limit, upgrade message rule
-- `references/dna-schema.md` — what `capture.mjs` measures and how to read it
+- `references/capture-protocol.md` — how to capture a site in Claude in Chrome, step by step
+- `references/dna-schema.md` — what `capture-page.js` measures and how to read it
 - `references/board-synthesis.md` — combining references without cloning one; `board.json` schema
 - `references/comparison-protocol.md` — how the critic grades a build against the board
 
@@ -44,8 +45,9 @@ Adapters, one per source:
    present a site as an Awwwards winner from memory.
 2. **Capture the live site, not the thumbnail.** Awwwards and Mobbin are indexes. The DNA comes
    from the site itself.
-3. **One script call, not click-by-click browsing.** Capture runs as ONE `node scripts/capture.mjs`
-   invocation over all picks. Never drive puppeteer/Chrome MCP step by step to study a site.
+3. **One measuring script, run in the real browser.** Every site is measured by the same
+   `scripts/capture-page.js`, run in the page through Claude in Chrome. Never study a site by
+   poking at its DOM step by step. Never Puppeteer, never Playwright.
 4. **Small and on-demand.** 8-12 candidates per run, 3-5 kept. No bulk crawling of Awwwards;
    reuse a cached listing under `.sumi/refs/` if it is under 7 days old.
 5. **Steal traits, never layouts.** The board takes at most ONE signature trait from each
@@ -60,15 +62,17 @@ Adapters, one per source:
 Scripts live in the plugin, not the project. Resolve the plugin root once:
 
 ```bash
-SUMI="${CLAUDE_PLUGIN_ROOT:-$(dirname "$(dirname "$(find ~/.claude/plugins -path '*sumi*/scripts/capture.mjs' -print -quit)")")}"
+SUMI="${CLAUDE_PLUGIN_ROOT}"
 node "$SUMI/scripts/awwwards.mjs" technology --awarded --limit 10 --out .sumi/refs/awwwards-technology.json
-node "$SUMI/scripts/capture.mjs" --from .sumi/refs/awwwards-technology.json --pick slug-a,slug-b,slug-c
-node "$SUMI/scripts/capture.mjs" https://linear.app https://stripe.com   # direct URLs
+node "$SUMI/scripts/capture.mjs" page                     # the in-page measuring script, for Claude in Chrome
+node "$SUMI/scripts/capture.mjs" save <url> desktop --from .sumi/refs/awwwards-technology.json < result.json
+node "$SUMI/scripts/capture.mjs" shot <url> desktop 0     # macOS: save the browser window
+node "$SUMI/scripts/capture.mjs" list
 ```
 
-`capture.mjs` needs `puppeteer-core` (resolved from the project, `$SUMI_PUPPETEER_DIR`, or known
-sibling projects) and a local Chrome. It takes ~40-60s per site (desktop + phone, scroll steps).
-Run it in the background for more than 3 sites.
+Capture follows `references/capture-protocol.md`. It needs Claude in Chrome. Screenshots need
+macOS (`screencapture`); elsewhere they are viewed, not saved. Allow a minute or two per site
+for desktop and phone.
 
 ## Output: `.sumi/refs/`
 
